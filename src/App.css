@@ -3,10 +3,15 @@
   margin: auto;
 }
 
+/* header css */
+
 .header {
   background-color: black;
   color: #fff;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
 }
 
 .navigation {
@@ -44,4 +49,33 @@
   background-color: rgb(85, 230, 230);
   color: #343434;
   box-shadow: 0 8px 6px -6px  rgb(85, 230, 230);
+}
+
+/* main pass css */
+
+.homepage {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  background-color: rgb(4, 4, 31);
+  color: white;
+  text-align: center;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  flex-grow: 0.5;
 }
