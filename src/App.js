@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
+import { createRef } from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -14,7 +15,6 @@ import IMGpp from './images/ip1.png';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import { useMediaQuery } from 'react-responsive';
-import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
 
@@ -36,20 +36,6 @@ function App() {
     top: 0,
     width: '100%'
   }
-
-  // const [scrollPosition, setSrollPosition] = useState(150);
-
-  // const handleScroll = () => {
-  //   const position = window.pageYOffset;
-  //   setSrollPosition(position);
-  // };
-  
-  // useEffect(() => {
-  //     window.addEventListener('scroll', handleScroll, { passive: true });
-  //     return () => {
-  //         window.removeEventListener('scroll', handleScroll);
-  //     };
-  // }, []);
 
   const researchData = [
     {
@@ -238,9 +224,9 @@ function App() {
 
   const handleLogo = () => {
     resetNavigationState();
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0, behavior: 'smooth' });
   }
-
+  
   return (
     <div className="App">
       <ThemeProvider ThemeProvider theme={theme}>
@@ -265,7 +251,6 @@ function App() {
                 Portfolio
               </Typography>
               <Box className='nav-wrapper'>
-                <Link to="research">
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
@@ -274,8 +259,6 @@ function App() {
                   >
                     Research
                   </Typography>
-                </Link>
-
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
