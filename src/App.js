@@ -16,6 +16,7 @@ import Section from './components/Section';
 import Footer from './components/Footer';
 import { useMediaQuery } from 'react-responsive';
 
+
 function App() {
 
   const isTabletOrMobileDevice = useMediaQuery({
@@ -31,6 +32,7 @@ function App() {
   const headerStyle = {
     backgroundColor: '#fff',
     color: 'black',
+    padding: 15,
     // boxShadow: '1px 2px 5px 3px grey',
     position: 'fixed', 
     top: 0,
@@ -207,15 +209,19 @@ function App() {
     switch(e.target.innerText) {
       case 'Research': 
         setResearch(true);
+        move(research)
         break;
       case 'Project': 
         setProject(true);
+        move(project)
         break;
       case 'Game': 
         setGame(true);
+        move(game)
         break;
       case 'About': 
         setAbout(true);
+        move(about)
         break;
       default:
         break;
@@ -226,7 +232,37 @@ function App() {
     resetNavigationState();
     window.scrollTo({top: 0, behavior: 'smooth' });
   }
+
+  const move = (e) => {
+    let position = e.current.offsetTop;
+    window.scrollTo({top: position, behavior: 'smooth' })
+  }
+
+  const research = useRef();
+  const project = useRef();
+  const game = useRef();
+  const about = useRef();
   
+  // const [scrollPosition, setSrollPosition] = useState(0);
+  // const handleScroll = () => {
+  //     const position = window.pageYOffset;
+  //     setSrollPosition(position);
+  // };
+  // useEffect(() => {
+  //     window.addEventListener('scroll', handleScroll, { passive: true });
+  //     return () => {
+  //         window.removeEventListener('scroll', handleScroll);
+  //     }; 
+  // }, []);
+
+  // const changeHeaderStyle = () => {
+  //   headerStyle.boxShadow = '1px 2px 5px 3px grey';
+  // }
+
+  // if (scrollPosition > 200) {
+  //   changeHeaderStyle()
+  // }
+
   return (
     <div className="App">
       <ThemeProvider ThemeProvider theme={theme}>
@@ -235,7 +271,7 @@ function App() {
         <Box style={headerStyle}> 
           <Container>
             <Box
-              m={3} 
+             
               display='flex'
               flexDirection='row'
               justifyContent="space-between"
@@ -299,12 +335,20 @@ function App() {
           </Typography>
         </Box>
 
-        <Section data={researchData} name='Research' id='research' />
-        <Section data={projectData} name='Project' id='project' />
-        <Section data={gameData} name='Game' id='game' />
-
+        <Box ref={research}> 
+          <Section data={researchData} />
+        </Box>
+        
+        <Box ref={project}>
+          <Section data={projectData} />
+        </Box>
+        
+        <Box ref={game}>
+          <Section data={gameData} />
+        </Box>
+       
         {/* about  */}
-        <Box id='about'>
+        <Box ref={about}>
           <Typography variant='h3' paddingTop={2} className='sectionTitle'>
             About Me
           </Typography>

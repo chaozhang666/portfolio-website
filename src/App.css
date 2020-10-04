@@ -55,12 +55,12 @@
   text-align: center;
 }
 
-.active {
+/* .active {
   border-radius: 10px;
   background-color: rgb(29, 28, 28);
   color: #fff;
   box-shadow: 0 8px 6px -6px  rgb(29, 28, 28);
-}
+} */
 
 #about {
   margin: '130px'
