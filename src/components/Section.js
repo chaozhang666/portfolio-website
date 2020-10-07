@@ -14,32 +14,30 @@ export default function Section(props) {
   })
 
   return (
-    <div>
-      <Box className='section'>
-          <Container>
-            <Box p={isTabletOrMobileDevice ? 0 : 5}>
-              <h1 className='sectionTitle'>{props.name}</h1>
-              <Divider />
-              <Grid
-                container
-                direction="row"
-                justify="center"
-                alignItems="center"
-              >
-                {props.data.map(e => 
-                  <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice ? 20 : 30 }}>
-                    <Card 
-                      name={e.title} 
-                      src={e.img} 
-                      link={e.link} 
-                      li={e.li}
-                    />
-                  </Grid>
-                )}
+    <div className='section'>
+      <Container>
+        <div>
+          <h1 className='sectionTitle'>{props.name}</h1>
+          <hr />
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            {props.data.map(e => 
+              <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice ? 20 : 30 }}>
+                <Card 
+                  name={e.title} 
+                  src={e.img} 
+                  link={e.link} 
+                  li={e.li}
+                />
               </Grid>
-            </Box>
-          </Container>
-        </Box>
+            )}
+          </Grid>
+        </div>
+      </Container>
     </div>
   )
 }

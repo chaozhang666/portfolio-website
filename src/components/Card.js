@@ -1,25 +1,15 @@
 import React from 'react'
-import { Box } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
-import { Link } from '@material-ui/core';
 
 export default function Card(props) {
-
-  const rootStyle = {
-    backgroundColor: '#fff',
-    color: 'black',
-    textDecoration: 'none'
-  }
   
   const titleStyle = {
     marginBottom: '10px',
     textAlign: 'center'
-    // fontSize: '30px'
   }
 
   const listWrapperStyle = {
     marginTop: '20px',
-    fontSize: '18px'
+    fontSize: '16px'
   }
 
   const imageStyle = {
@@ -30,7 +20,7 @@ export default function Card(props) {
   return (
     <div>
       <a href={props.link}>
-        <div class='card'>
+        <div className='card hvr-back-pulse'>
           <h2 style={titleStyle}>{props.name}</h2>
           <img src={props.src} style={imageStyle} />
           <ul style={listWrapperStyle}>

@@ -19,7 +19,8 @@ export default function Footer() {
     textAlign: 'center',
     backgroundColor: 'black',
     color: '#fff',
-    fontSize: '20px'
+    fontSize: '20px',
+    padding: '30px'
   }
 
   const titleStyle = {

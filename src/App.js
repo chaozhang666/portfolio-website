@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import { createRef } from 'react';
+import './hover.css';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -9,19 +10,28 @@ import { Container } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { Box } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
-import IMGcg from './images/cg.gif';
-import IMGste from './images/sss.png';
-import IMGpp from './images/ip1.png';
+import IMGsss from './img/sss.png';
+import IMGcg from './img/cg.gif';
+import IMGip from './img/ip.png';
+import IMGad from './img/audio.png';
+import IMGrfid from './img/rfid.png';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import { useMediaQuery } from 'react-responsive';
+// import { Anchor } from 'antd';
+// const { Link } = Anchor;
 
 
 function App() {
 
-  const isTabletOrMobileDevice = useMediaQuery({
-    query: '(max-device-width: 1224px)'
-  })
+  // const [targetOffset, setTargetOffset] = useState(undefined);
+  // useEffect(() => {
+  //   setTargetOffset(window.innerHeight / 2);
+  // }, []);
+
+  // const isTabletOrMobileDevice = useMediaQuery({
+  //   query: '(max-device-width: 1224px)'
+  // })
 
   const theme = createMuiTheme({
     typography: {
@@ -30,52 +40,77 @@ function App() {
   });
 
   const headerStyle = {
-    backgroundColor: '#fff',
-    color: 'black',
-    padding: 15,
-    // boxShadow: '1px 2px 5px 3px grey',
+    backgroundColor: '#111111',
+    color: '#fff',
+    padding: 18,
     position: 'fixed', 
     top: 0,
-    width: '100%'
+    width: '100%',
+    zIndex: 999
+    // boxShadow: '1px 2px 5px 3px grey',
   }
 
   const researchData = [
     {
-      link: 'https://github.com/zzzchaozzz/ComputerGraphics',
-      title: 'Computer Graphics',
-      img: IMGcg,
-      li: ['WPF Project.' , 'Display images from CT data.']
-    },
-    {
-      link: 'https://github.com/zzzchaozzz/GIS-NavigationToolboxDevelopment',
-      title: 'GIS - Python',
-      img: 'https://media.giphy.com/media/gjsFJuBQg6ABh59RTL/giphy.gif',
-      li: ['City of Vancouver ArcGIS model.' , 'Navigation toolbox developed by Python.']
-    },
-    {
       link: 'https://github.com/zzzchaozzz/Steganography',
       title: 'Steganography',
-      img: IMGste,
+      img: IMGsss,
       li: ['New steganography algorithm.']
     },
     {
+      link: 'https://github.com/zzzchaozzz/GIS-NavigationToolboxDevelopment',
+      title: 'GIS',
+      img: 'https://media.giphy.com/media/gjsFJuBQg6ABh59RTL/giphy.gif',
+      li: ['City of Vancouver ArcGIS model.']
+    },
+    {
+      link: 'https://github.com/zzzchaozzz/ComputerGraphics',
+      title: 'Computer Graphics',
+      img: IMGcg,
+      li: ['Render images from raw CT data.']
+    },
+    {
       link: 'https://github.com/zzzchaozzz/ImageProcessing',
-      title: 'Image Processsing',
-      img: IMGpp,
-      li: ['Contour detection & Functional Filters.']
+      title: 'Image Processsing', 
+      img: IMGip,
+      li: ['Contour Detection & Filters.']
+    },
+    {
+      link: 'https://github.com/chaozhang666/computer-audio/blob/master/VoiceDisguiseResearchPaper_chaoZhang.pdf',
+      title: 'Computer Audio', 
+      img: IMGad,
+      li: ['Identification of Voice Disguise']
+    },
+    {
+      link: 'https://github.com/chaozhang666/NetworkCommunication/blob/master/GroupResearch.pdf',
+      title: 'RFID Safety', 
+      img: IMGrfid,
+      li: ['Fractional Fourier Transform']
     }
   ];
 
   const projectData = [
     {
+      link: 'https://web-dev-tutorial-eo8ezjk5c.vercel.app',
+      title: 'Web Dev Tutorial',
+      img: 'https://media.giphy.com/media/KwzTxTAFuiXKQ7ebri/giphy.gif',
+      li: ['ReactJS & Ant Design']
+    },  
+    {
+      link: 'https://search-country-info-n3jtsvhvj.vercel.app',
+      title: 'REST Countries Info',
+      img: 'https://media.giphy.com/media/NwLRiAWGOi33R4SimS/giphy.gif',
+      li: ['Restful API']
+    },
+    {
       link: 'https://chi-noodlebar.com',
-      title: 'Website',
+      title: 'Responsive Website',
       img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
       li: ['A noodle bar in Vancouver.']
     },
     {
       link: 'https://earnest.education',
-      title: 'Website',
+      title: 'Responsive Website',
       img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
       li: ['An education company in Richmond.']
     },
@@ -86,10 +121,22 @@ function App() {
       li: ['Online vocabulary testing.']
     },
     {
+      link: 'https://speech-recognition.chaozhang.vercel.app',
+      title: 'Speach Recognition',
+      img: 'https://media.giphy.com/media/HDmiGSoYfUImCRCL2S/giphy.gif',
+      li: ['window.SpeechRecognition']
+    },
+    {
       link: 'https://remix-demo-chao.vercel.app',
       title: 'Music Remix',
       img: 'https://media.giphy.com/media/iFPQSxCPmEzeHTmaLE/giphy.gif',
       li: ['Online musical instruments.']
+    },
+    {
+      link: 'https://to-do-list-peach.vercel.app',
+      title: 'Todo List',
+      img: 'https://media.giphy.com/media/ONyxD52Z8EXKYqxfq8/giphy.gif',
+      li: ['Vanilla JS']
     },
     {
       link: 'https://speed-typer.chaozhang.vercel.app',
@@ -102,16 +149,22 @@ function App() {
       title: 'Exchange Rate Calculator',
       img: 'https://media.giphy.com/media/fvefr3DhTQxCISeLo0/giphy.gif',
       li: ['Live exchange rate API.']
+    },
+    {
+      link: 'https://javascript-slides.now.sh',
+      title: 'JavaScript Slider',
+      img: 'https://media.giphy.com/media/KBBMSwABohGtpBWd9m/giphy.gif',
+      li: ['Based on slides.com library.']
+    },
+    {
+      link: 'https://qqzhang.vercel.app',
+      title: 'Web Teaching',
+      img: 'https://media.giphy.com/media/9N4coJidDjycT1eeay/giphy.gif',
+      li: ['Introduction to HTML & CSS']
     }
   ];
 
   const gameData = [
-    {
-      link: 'https://shequ.codemao.cn/work/55306453',
-      title: 'Block Tower',
-      img: 'https://media.giphy.com/media/j5zwAHn8VZIYPZwjF0/giphy.gif',
-      li: ['CodeMao Sandbox Project.']
-    },
     {
       link: 'https://shequ.codemao.cn/work/42058554',
       title: 'Street Fighter',
@@ -189,7 +242,13 @@ function App() {
       title: 'No BB Fly',
       img: 'https://media.giphy.com/media/TLUbkUiYFC1fZxQkvS/giphy.gif',
       li: ['Codemao start project.']
-    }
+    }, 
+    {
+      link: 'https://shequ.codemao.cn/work/55306453',
+      title: 'Block Tower',
+      img: 'https://media.giphy.com/media/j5zwAHn8VZIYPZwjF0/giphy.gif',
+      li: ['CodeMao Sandbox Project.']
+    },
   ];
 
   const [isResearch, setResearch] = useState(false);
@@ -234,7 +293,7 @@ function App() {
   }
 
   const move = (e) => {
-    let position = e.current.offsetTop;
+    let position = e.current.offsetTop - 100;
     window.scrollTo({top: position, behavior: 'smooth' })
   }
 
@@ -251,18 +310,18 @@ function App() {
         <Box style={headerStyle}> 
           <Container>
             <Box
-             
               display='flex'
               flexDirection='row'
               justifyContent="space-between"
               alignItems='center'
+              className='animate__animated animate__zoomInRight'
             >
               <Typography 
                 className='nav-item' 
                 variant='h4' 
                 onClick={handleLogo}
                 dispaly='inline'
-                className='logo'
+                className='logo' 
               >
                 Portfolio
               </Typography>
@@ -272,6 +331,7 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isResearch ? 'active' : undefined}
+                    className='hvr-float'
                   >
                     Research
                   </Typography>
@@ -279,7 +339,8 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    className={isProject ? 'active' : undefined}
+                    className={isProject ? 'active' : undefined}             
+                    className='hvr-float'
                   >
                     Project
                   </Typography>
@@ -288,6 +349,7 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isGame ? 'active' : undefined}
+                    className='hvr-float'
                   >
                     Game
                   </Typography>
@@ -296,6 +358,7 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isAbout  ? 'active' : undefined}
+                    className='hvr-float'
                   >
                     About
                   </Typography>
@@ -305,51 +368,52 @@ function App() {
         </Box> 
 
         {/* homepage  */}
-
         <div id='homepage'>
           <img 
               src='https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif' 
               width='240px'
+              className='animate__animated animate__zoomInDown'
             />
-          <h1>Hi, I am Chao.</h1>
+          <h1 style={{color:'whitesmoke'}} className='animate__animated animate__zoomIn'>Hi, I am Chao.</h1>
         </div>
 
-        <div ref={research}>
+        <div ref={research} id='research'>
           <Section data={researchData} name='Research' />
         </div>
 
-        <div ref={project}>
+        <div ref={project} id='project'>
           <Section data={projectData} name='Project' />
         </div>
 
-        <div ref={game}>
+        <div ref={game} id='game'>
           <Section data={gameData}  name='Game' />
         </div>
 
         {/* about  */}
-        <Box ref={about}>
+        <div ref={about} id='about' style={{paddingTop: '50px'}}>
           <h1 className='sectionTitle'>About Me</h1>
+          <hr />
           <Container>
             <Grid
               container
               direction="row"
               justify="center"
-              alignItems="center"
-              style={{margin: '0 30px'}}
+              style={{marginBottom:'30px'}}
             >
-              <Grid item xs={12} sm={6} style={{padding: isTabletOrMobileDevice? '20px' : '60px 80px' }}>
+              <Grid item xs={12} sm={4} style={{padding:'20px'}}>
                 <Typography variant='h5'>
-                  I am a creative Developer with M.Sc in Computer Science. My programming experience includes Python, JavaScript, Java, C, C++, C#, Swift, Latex and Logo. My research and projects cover Image Processing, Computer Graphics, GIS, AI, Face Recognition, Steganography, Web Development, etc.
+                  I am a professional Software Developer with M.Sc in Computer Science. Currently, I am working as a Front End Developer in React web projects and React-Native mobile projects. I use Javascript & Typescript everyday and they are my favourite programming languages. In my spare time, I love coding some fun projects and playing guitar.
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6} style={{padding: isTabletOrMobileDevice? '20px' : '60px 80px' }}>
+
+              <Grid item xs={12} sm={4} style={{padding:'20px'}}>
                 <Typography variant='h5'>
-                  I am also a coding instructor teaching Web Development, Java for AP CS, Python for intro to CS and Codemao & Scratch in building game by blocks. I established Earnest Education Coding Club in Richmond, BC since 2019 Sep which lets students learn different programming languages in a fun way.
+                  I am also a coding instructor teaching students HTML, CSS, JavaScript, Python and Block Coding(Codemao & Scratch). I established a coding club in 2019 Sep to provide students online coding education. It lets students quickly learn the fundamental of different programming languages in a fun way.
                 </Typography>
               </Grid>
             </Grid>
           </Container>
-        </Box>
+        </div>
       
         <Footer />
 
