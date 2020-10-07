@@ -131,3 +131,10 @@ hr {
 #about {
   background-image: linear-gradient(to bottom, #5383aa, #fff);
 }
+
+.typed-cursor {
+  color: #fff;
+  margin-left: 30px;
+  font-size: 30px;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}

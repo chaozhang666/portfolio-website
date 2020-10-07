@@ -18,16 +18,12 @@ import IMGrfid from './img/rfid.png';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import { useMediaQuery } from 'react-responsive';
+import Typing from './components/Typing';
 // import { Anchor } from 'antd';
 // const { Link } = Anchor;
 
 
 function App() {
-
-  // const [targetOffset, setTargetOffset] = useState(undefined);
-  // useEffect(() => {
-  //   setTargetOffset(window.innerHeight / 2);
-  // }, []);
 
   // const isTabletOrMobileDevice = useMediaQuery({
   //   query: '(max-device-width: 1224px)'
@@ -47,7 +43,6 @@ function App() {
     top: 0,
     width: '100%',
     zIndex: 999
-    // boxShadow: '1px 2px 5px 3px grey',
   }
 
   const researchData = [
@@ -374,7 +369,17 @@ function App() {
               width='240px'
               className='animate__animated animate__zoomInDown'
             />
-          <h1 style={{color:'whitesmoke'}} className='animate__animated animate__zoomIn'>Hi, I am Chao.</h1>
+          {/* <h1 style={{color:'whitesmoke'}} className='animate__animated animate__zoomIn'>Hi, I am Chao.</h1> */}
+          <Typing 
+          strings={[
+            "Hi, I'm Chao Zhang",
+            'A Front End Developer 💡',
+            'My skills include:',
+            'HTML, CSS, JS, TS, React, React Native, Vue ...',
+            'Find my work below 👇'
+          ]} 
+          className='animate__animated animate__zoomIn'
+          />
         </div>
 
         <div ref={research} id='research'>
