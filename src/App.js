@@ -242,26 +242,6 @@ function App() {
   const project = useRef();
   const game = useRef();
   const about = useRef();
-  
-  // const [scrollPosition, setSrollPosition] = useState(0);
-  // const handleScroll = () => {
-  //     const position = window.pageYOffset;
-  //     setSrollPosition(position);
-  // };
-  // useEffect(() => {
-  //     window.addEventListener('scroll', handleScroll, { passive: true });
-  //     return () => {
-  //         window.removeEventListener('scroll', handleScroll);
-  //     }; 
-  // }, []);
-
-  // const changeHeaderStyle = () => {
-  //   headerStyle.boxShadow = '1px 2px 5px 3px grey';
-  // }
-
-  // if (scrollPosition > 200) {
-  //   changeHeaderStyle()
-  // }
 
   return (
     <div className="App">
@@ -325,33 +305,30 @@ function App() {
         </Box> 
 
         {/* homepage  */}
-        <Box id='homepage'>
-          <img 
-            src='https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif' 
-            width='240px'
-          />
-          <Typography variant='h4' paddingTop={2}>
-            Hi, I am Chao.
-          </Typography>
-        </Box>
 
-        <Box ref={research}> 
-          <Section data={researchData} />
-        </Box>
-        
-        <Box ref={project}>
-          <Section data={projectData} />
-        </Box>
-        
-        <Box ref={game}>
-          <Section data={gameData} />
-        </Box>
-       
+        <div id='homepage'>
+          <img 
+              src='https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif' 
+              width='240px'
+            />
+          <h1>Hi, I am Chao.</h1>
+        </div>
+
+        <div ref={research}>
+          <Section data={researchData} name='Research' />
+        </div>
+
+        <div ref={project}>
+          <Section data={projectData} name='Project' />
+        </div>
+
+        <div ref={game}>
+          <Section data={gameData}  name='Game' />
+        </div>
+
         {/* about  */}
         <Box ref={about}>
-          <Typography variant='h3' paddingTop={2} className='sectionTitle'>
-            About Me
-          </Typography>
+          <h1 className='sectionTitle'>About Me</h1>
           <Container>
             <Grid
               container

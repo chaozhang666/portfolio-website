@@ -5,6 +5,7 @@ import { Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import Card from './Card';
 import { useMediaQuery } from 'react-responsive';
+import { Divider } from '@material-ui/core';
 
 export default function Section(props) {
 
@@ -17,9 +18,8 @@ export default function Section(props) {
       <Box className='section'>
           <Container>
             <Box p={isTabletOrMobileDevice ? 0 : 5}>
-              <Typography variant='h3'  className='sectionTitle'>
-                {props.name}
-              </Typography>
+              <h1 className='sectionTitle'>{props.name}</h1>
+              <Divider />
               <Grid
                 container
                 direction="row"
@@ -27,7 +27,7 @@ export default function Section(props) {
                 alignItems="center"
               >
                 {props.data.map(e => 
-                  <Grid item xs={12} sm={6} style={{padding: isTabletOrMobileDevice ? 30 : 60 }}>
+                  <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice ? 20 : 30 }}>
                     <Card 
                       name={e.title} 
                       src={e.img} 

@@ -12,9 +12,9 @@ export default function Card(props) {
   }
   
   const titleStyle = {
-    marginBottom: '20px',
-    textAlign: 'center',
-    fontSize: '30px'
+    marginBottom: '10px',
+    textAlign: 'center'
+    // fontSize: '30px'
   }
 
   const listWrapperStyle = {
@@ -29,19 +29,17 @@ export default function Card(props) {
 
   return (
     <div>
-      <Link href={props.link}>
-        <Box style={rootStyle} p={4} boxShadow={5}> 
-          <Typography variant='h4' style={titleStyle}>
-            {props.name}
-          </Typography>
+      <a href={props.link}>
+        <div class='card'>
+          <h2 style={titleStyle}>{props.name}</h2>
           <img src={props.src} style={imageStyle} />
           <ul style={listWrapperStyle}>
             {props.li.map(e => 
               <li>{e}</li>
             )}   
           </ul>
-        </Box>    
-      </Link>
+        </div>
+      </a>
     </div>
   )
 }
