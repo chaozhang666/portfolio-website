@@ -1,14 +1,15 @@
 import React from 'react'
-import { Box } from '@material-ui/core';
 import { Container } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import Card from '../Card/Card';
 import { useMediaQuery } from 'react-responsive';
-import { Divider } from '@material-ui/core';
 import './Section.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Section(props) {
+
+  AOS.init();
 
   const isTabletOrMobileDevice = useMediaQuery({
     query: '(max-device-width: 1224px)'
@@ -18,7 +19,9 @@ export default function Section(props) {
     <div className='section'>
       <Container>
         <div>
-          <h1 className='sectionTitle'>{props.name}</h1>
+          <h1 className='sectionTitle' 
+          data-aos="zoom-in" data-aos-once="true"
+          >{props.name}</h1>
           <hr />
           <Grid
             container

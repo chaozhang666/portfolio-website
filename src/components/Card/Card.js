@@ -1,15 +1,6 @@
 import React from 'react'
 import './Card.css'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 export default function Card(props) {
-  
-  AOS.init();
-
-  const titleStyle = {
-
-  }
 
   const listWrapperStyle = {
     marginTop: '20px',
@@ -24,7 +15,7 @@ export default function Card(props) {
   return (
     <div>
       <a href={props.link}>
-        <div className='card hvr-back-pulse' data-aos="zoom-in" data-aos-once="true">
+        <div className='card hvr-back-pulse'>
           <h2 style={titleStyle} className='title'>{props.name}</h2>
           <img src={props.src} style={imageStyle} />
           <ul style={listWrapperStyle}>
