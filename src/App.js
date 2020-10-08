@@ -63,6 +63,7 @@ function App() {
 
   const move = (e) => {
     let position = e.current.offsetTop;
+    position -= isMobileDevice ? 100 : 0;
     window.scrollTo({top: position, behavior: 'smooth' })
   }
 

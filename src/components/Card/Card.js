@@ -15,8 +15,8 @@ export default function Card(props) {
   return (
     <div>
       <a href={props.link}>
-        <div className='card hvr-back-pulse'>
-          <h2 style={titleStyle} className='title'>{props.name}</h2>
+        <div className='card'>
+          <h2 className='title'>{props.name}</h2>
           <img src={props.src} style={imageStyle} />
           <ul style={listWrapperStyle}>
             {props.li.map(e => 
