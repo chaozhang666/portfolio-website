@@ -3,9 +3,10 @@ import { Box } from '@material-ui/core';
 import { Container } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
-import Card from './Card';
+import Card from '../Card/Card';
 import { useMediaQuery } from 'react-responsive';
 import { Divider } from '@material-ui/core';
+import './Section.css';
 
 export default function Section(props) {
 

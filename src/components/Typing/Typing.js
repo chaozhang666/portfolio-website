@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Typed from 'typed.js';
-import { Typography } from '@material-ui/core';
+import './Typing.css';
 
 class Typing extends React.Component {
   componentDidMount() {
@@ -11,7 +11,7 @@ class Typing extends React.Component {
     const options = {
     	strings: strings,
       typeSpeed: 40,
-      backDelay: 1500, 
+      backDelay: 1400, 
     };
     // this.el refers to the <span> in the render() method
     this.typed = new Typed(this.el, options);
@@ -28,7 +28,7 @@ class Typing extends React.Component {
     const textStyle = {
       color: '#fff',
       fontSize: '30px',
-      textShadow: '0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #7effdb, 0 0 30px #7effdb, 0 0 40px #7effdb, 0 0 55px #7effdb, 0 0 75px #7effdb'
+      padding: 20
     }
 
     return (
