@@ -1,7 +1,6 @@
 .menu-btn {
-  --box-shadow-color: rgba(255, 101, 47, 0.2);
   width: 80px;
-  height: 80px;
+  height: 40px;
   position: relative;
 
   display: flex;
@@ -16,8 +15,8 @@
 .menu-btn__burger,
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-  width: 50px;
-  height: 6px;
+  width: 35px;
+  height: 5px;
 
   border-radius: 5px;
   background-color: #fff;
@@ -31,10 +30,10 @@
   position: absolute;
 }
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-10px);
 }
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(10px);
 }
 
 /* ANIMATION */
