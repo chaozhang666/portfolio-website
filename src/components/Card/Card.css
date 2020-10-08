@@ -7,3 +7,12 @@
   border-radius: 10px;
   background-color: whitesmoke;
 }
+
+.li {
+  color: rgb(63, 62, 62);
+}
+
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+}

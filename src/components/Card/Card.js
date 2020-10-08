@@ -8,8 +8,7 @@ export default function Card(props) {
   AOS.init();
 
   const titleStyle = {
-    marginBottom: '10px',
-    textAlign: 'center'
+
   }
 
   const listWrapperStyle = {
@@ -26,11 +25,11 @@ export default function Card(props) {
     <div>
       <a href={props.link}>
         <div className='card hvr-back-pulse' data-aos="zoom-in" data-aos-once="true">
-          <h2 style={titleStyle}>{props.name}</h2>
+          <h2 style={titleStyle} className='title'>{props.name}</h2>
           <img src={props.src} style={imageStyle} />
           <ul style={listWrapperStyle}>
             {props.li.map(e => 
-              <li>{e}</li>
+              <li className='li'>{e}</li>
             )}   
           </ul>
         </div>
