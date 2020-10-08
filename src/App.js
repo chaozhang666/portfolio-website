@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRef } from 'react';
-import { createRef } from 'react';
 import './hover.css';
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -36,7 +35,7 @@ function App() {
   const webHeaderStyle = {
     backgroundColor: '#111111',
     color: '#fff',
-    padding: isMobileDevice? 10 : 18,
+    padding: 10,
     position: 'fixed', 
     top: 0,
     width: '100%',
@@ -244,37 +243,22 @@ function App() {
     },
   ];
 
-  // const [isResearch, setResearch] = useState(false);
-  // const [isProject, setProject] = useState(false);
-  // const [isGame, setGame] = useState(false);
-  // const [isAbout, setAbout] = useState(false);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
-  // const resetNavigationState = () => {
-  //   setResearch(false);
-  //   setProject(false);
-  //   setGame(false);
-  //   setAbout(false);
-  // }
-
   const  handleNavigation = (e) => {
-    // resetNavigationState();
     switch(e.target.innerText) {
       case 'Research': 
-        // setResearch(true);
         move(research)
         break;
       case 'Project': 
-        // setProject(true);
         move(project)
         break;
       case 'Game': 
-        // setGame(true);
         move(game)
         break;
       case 'About': 
-        // setAbout(true);
         move(about)
         break;
       default:
@@ -283,7 +267,6 @@ function App() {
   }
 
   const handleLogo = () => {
-    // resetNavigationState();
     window.scrollTo({top: 0, behavior: 'smooth' });
   }
 
@@ -335,8 +318,6 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    // className={isResearch ? 'active' : undefined}
-                    // className='hvr-float'
                   >
                     Research
                   </Typography>
@@ -344,8 +325,6 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    // className={isProject ? 'active' : undefined}             
-                    // className='hvr-float'
                   >
                     Project
                   </Typography>
@@ -353,8 +332,6 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    // className={isGame ? 'active' : undefined}
-                    // className='hvr-float'
                   >
                     Game
                   </Typography>
@@ -362,8 +339,6 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    // className={isAbout  ? 'active' : undefined}
-                    // className='hvr-float'
                   >
                     About
                   </Typography>
@@ -378,9 +353,8 @@ function App() {
             </Box>
           </Container>
 
-          <div className='mobil-nav-wapper' 
-          style={{display: isMenuOpen ? 'initial' : 'none'}}>
-            <div className='mobil-nav'>
+          <div style={{display: isMenuOpen && isMobileDevice ? 'initial' : 'none'}}>
+            <div className='mobil-nav animate__animated animate__fadeInRight'>
                 <h1 onClick={handleNavigation}>Research</h1>
                 <h1 onClick={handleNavigation}>Project</h1>
                 <h1 onClick={handleNavigation}>Game</h1>
