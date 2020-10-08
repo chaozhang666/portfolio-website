@@ -1,3 +1,4 @@
+
 a {
   text-decoration: none;
 }
@@ -145,5 +146,16 @@ hr {
   }
 }
 
+.mobil-nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.mobil-nav h1 {
+  text-align: center;
+  display: inline-block;
+  font-size: 22px;
+}
 

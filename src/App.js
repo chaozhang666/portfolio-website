@@ -244,37 +244,37 @@ function App() {
     },
   ];
 
-  const [isResearch, setResearch] = useState(false);
-  const [isProject, setProject] = useState(false);
-  const [isGame, setGame] = useState(false);
-  const [isAbout, setAbout] = useState(false);
+  // const [isResearch, setResearch] = useState(false);
+  // const [isProject, setProject] = useState(false);
+  // const [isGame, setGame] = useState(false);
+  // const [isAbout, setAbout] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
-  const resetNavigationState = () => {
-    setResearch(false);
-    setProject(false);
-    setGame(false);
-    setAbout(false);
-  }
+  // const resetNavigationState = () => {
+  //   setResearch(false);
+  //   setProject(false);
+  //   setGame(false);
+  //   setAbout(false);
+  // }
 
   const  handleNavigation = (e) => {
-    resetNavigationState();
+    // resetNavigationState();
     switch(e.target.innerText) {
       case 'Research': 
-        setResearch(true);
+        // setResearch(true);
         move(research)
         break;
       case 'Project': 
-        setProject(true);
+        // setProject(true);
         move(project)
         break;
       case 'Game': 
-        setGame(true);
+        // setGame(true);
         move(game)
         break;
       case 'About': 
-        setAbout(true);
+        // setAbout(true);
         move(about)
         break;
       default:
@@ -283,12 +283,12 @@ function App() {
   }
 
   const handleLogo = () => {
-    resetNavigationState();
+    // resetNavigationState();
     window.scrollTo({top: 0, behavior: 'smooth' });
   }
 
   const move = (e) => {
-    let position = e.current.offsetTop - 100;
+    let position = e.current.offsetTop - 140;
     window.scrollTo({top: position, behavior: 'smooth' })
   }
 
@@ -335,7 +335,7 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    className={isResearch ? 'active' : undefined}
+                    // className={isResearch ? 'active' : undefined}
                     // className='hvr-float'
                   >
                     Research
@@ -344,7 +344,7 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    className={isProject ? 'active' : undefined}             
+                    // className={isProject ? 'active' : undefined}             
                     // className='hvr-float'
                   >
                     Project
@@ -353,7 +353,7 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    className={isGame ? 'active' : undefined}
+                    // className={isGame ? 'active' : undefined}
                     // className='hvr-float'
                   >
                     Game
@@ -362,7 +362,7 @@ function App() {
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
-                    className={isAbout  ? 'active' : undefined}
+                    // className={isAbout  ? 'active' : undefined}
                     // className='hvr-float'
                   >
                     About
@@ -371,18 +371,24 @@ function App() {
             
               {/* mobile header  */}
               <div id='mobileHeader' style={{display: isMobileDevice ? "initial" : 'none'}}>
-
                 <div className={buttonClasses} onClick={handleButtonClick}>
                   <div className='menu-btn__burger'></div>
-                </div>
-                
-              </div>
-
-            
+                </div>              
+              </div>  
             </Box>
           </Container>
-        </Box> 
 
+          <div className='mobil-nav-wapper' 
+          style={{display: isMenuOpen ? 'initial' : 'none'}}>
+            <div className='mobil-nav'>
+                <h1 onClick={handleNavigation}>Research</h1>
+                <h1 onClick={handleNavigation}>Project</h1>
+                <h1 onClick={handleNavigation}>Game</h1>
+                <h1 onClick={handleNavigation}>About</h1>
+            </div>
+          </div>
+
+        </Box> 
 
         {/* homepage  */}
         <div id='homepage'>
