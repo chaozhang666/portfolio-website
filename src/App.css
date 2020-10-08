@@ -23,17 +23,6 @@ a {
   background-image: linear-gradient(to bottom, black, #131313);
 }
 
-/* 
-.webHeaderStyle {
-  background-color: '#111111';
-  color: '#fff';
-  padding: 10;
-  position: 'fixed';
-  top: 0;
-  width: '100%';
-  z-index: 999;
-} */
-
 .navigation {
   padding: 20px;
   display: flex;

@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import { Box } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { useMediaQuery } from 'react-responsive';
-
+import './Footer.css'
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -26,11 +26,6 @@ export default function Footer() {
   const titleStyle = {
     marginBottom: '14px',
     fontSize: '28px'
-  }
-
-  const iconStyle = {
-    margin: '10px',
-    fontSize: '30px'
   }
 
   return (
@@ -59,9 +54,15 @@ export default function Footer() {
               <Typography variant='h5' style={titleStyle}>
               Around Me
               </Typography>
-              <EmailIcon style={iconStyle} />
-              <GitHubIcon style={iconStyle} />
-              <FacebookIcon style={iconStyle} />
+              <a href="mailto: raidenchao@gmail.com">
+                <EmailIcon className='icons' fontSize="large"/>
+              </a>
+              <a href='https://github.com/chaozhang666'>
+                <GitHubIcon className='icons' fontSize="large"/>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100014959716281">
+                <FacebookIcon className='icons' fontSize="large"/>
+              </a>     
             </Grid>
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30px' }}>
               <Typography variant='h5' style={titleStyle}>

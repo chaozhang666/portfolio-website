@@ -1,0 +1,12 @@
+.icons:hover {
+  cursor: pointer;
+}
+
+.icons {
+  margin: 10px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
