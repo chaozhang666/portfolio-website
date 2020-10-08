@@ -20,7 +20,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, #000000, #131313);
+  background-image: linear-gradient(to bottom, black, #131313);
 }
 
 /* 
@@ -64,14 +64,9 @@ a {
 }
 
 hr {
-  width: 200px;
-  height: 20px;
+  width: 180px;
   margin: 50px auto;
-  color: #7effdb;
-}
-
-#homepage {
-  background-image: linear-gradient(to bottom, #111111, #131313);
+  border-width: 5px;
 }
 
 #research, #project, #game, #about{

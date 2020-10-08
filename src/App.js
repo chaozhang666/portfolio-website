@@ -30,7 +30,7 @@ function App() {
   });
 
   const webHeaderStyle = {
-    backgroundColor: '#111111',
+    backgroundColor: 'black',
     color: '#fff',
     padding: 10,
     position: 'fixed', 
@@ -62,7 +62,7 @@ function App() {
   }
 
   const move = (e) => {
-    let position = e.current.offsetTop - 140;
+    let position = e.current.offsetTop;
     window.scrollTo({top: position, behavior: 'smooth' })
   }
 
@@ -193,15 +193,15 @@ function App() {
               container
               direction="row"
               justify="center"
-              style={{paddingBottom:'80px', color: '#fff'}}
+              style={{paddingBottom:'80px',color: '#fff'}}
             >
-              <Grid item xs={12} sm={4} style={{padding:'20px'}}>
+              <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
                 <Typography variant='h5'>
                   I am a professional Software Developer with M.Sc in Computer Science. Currently, I am working as a Front End Developer in React web projects and React-Native mobile projects. I use Javascript & Typescript everyday and they are my favourite programming languages. In my spare time, I love coding some fun projects and playing guitar.
                 </Typography>
               </Grid>
 
-              <Grid item xs={12} sm={4} style={{padding:'20px'}}>
+              <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
                 <Typography variant='h5'>
                   I am also a coding instructor teaching students HTML, CSS, JavaScript, Python and Block Coding(Codemao & Scratch). I established a coding club in 2019 Sep to provide students online coding education. It lets students quickly learn the fundamental of different programming languages in a fun way.
                 </Typography>

@@ -72,7 +72,9 @@ export default function Footer() {
               </Typography>
             </Grid>
           </Grid>
+          
         </Container>
+        <p style={{marginTop: '30px', fontSize: 16}}>© 2020 Chao Zhang</p>
       </Box>
     </div>
   )
