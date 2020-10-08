@@ -25,9 +25,9 @@ import Typing from './components/Typing';
 
 function App() {
 
-  // const isTabletOrMobileDevice = useMediaQuery({
-  //   query: '(max-device-width: 1224px)'
-  // })
+  const isMobileDevice = useMediaQuery({
+    query: '(max-device-width: 768px)'
+  })
 
   const theme = createMuiTheme({
     typography: {
@@ -35,10 +35,10 @@ function App() {
     }
   });
 
-  const headerStyle = {
+  const webHeaderStyle = {
     backgroundColor: '#111111',
     color: '#fff',
-    padding: 18,
+    padding: isMobileDevice? 10 : 18,
     position: 'fixed', 
     top: 0,
     width: '100%',
@@ -250,6 +250,8 @@ function App() {
   const [isProject, setProject] = useState(false);
   const [isGame, setGame] = useState(false);
   const [isAbout, setAbout] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const resetNavigationState = () => {
     setResearch(false);
@@ -297,12 +299,16 @@ function App() {
   const game = useRef();
   const about = useRef();
 
+  const handleButtonClick = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <div className="App">
       <ThemeProvider ThemeProvider theme={theme}>
 
         {/* header  */}
-        <Box style={headerStyle}> 
+        <Box style={webHeaderStyle}>
           <Container>
             <Box
               display='flex'
@@ -320,13 +326,14 @@ function App() {
               >
                 Portfolio
               </Typography>
-              <Box className='nav-wrapper'>
+
+              <Box className='nav-wrapper'>            
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isResearch ? 'active' : undefined}
-                    className='hvr-float'
+                    // className='hvr-float'
                   >
                     Research
                   </Typography>
@@ -335,7 +342,7 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isProject ? 'active' : undefined}             
-                    className='hvr-float'
+                    // className='hvr-float'
                   >
                     Project
                   </Typography>
@@ -344,7 +351,7 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isGame ? 'active' : undefined}
-                    className='hvr-float'
+                    // className='hvr-float'
                   >
                     Game
                   </Typography>
@@ -353,33 +360,42 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item'
                     className={isAbout  ? 'active' : undefined}
-                    className='hvr-float'
+                    // className='hvr-float'
                   >
                     About
                   </Typography>
                 </Box>
+            
+              {/* mobile header  */}
+              <div id='mobileHeader' style={{display: isMobileDevice ? "initial" : 'none'}}>
+                <div class="menu-btn" className={!isMenuOpen ? 'open' : 'none'} onClick={handleButtonClick} >
+                  <div class="menu-btn__burger"></div>
+                </div>
+              </div>
+
+            
             </Box>
           </Container>
         </Box> 
 
+
         {/* homepage  */}
         <div id='homepage'>
           <img 
-              src='https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif' 
-              width='240px'
-              className='animate__animated animate__zoomInDown'
-            />
-          {/* <h1 style={{color:'whitesmoke'}} className='animate__animated animate__zoomIn'>Hi, I am Chao.</h1> */}
-          <Typing 
-          strings={[
-            "Hi, I'm Chao Zhang",
-            'A Front End Developer 💡',
-            'My skills include:',
-            'HTML, CSS, JS, TS, React, React Native, Vue ...',
-            'Find my work below 👇'
-          ]} 
-          className='animate__animated animate__zoomIn'
+            src='https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif' 
+            width='240px'
+            className='animate__animated animate__zoomInDown'
           />
+          <Typing 
+            strings={[
+              "Hi, I'm Chao Zhang",
+              'A Front End Developer 💡',
+              'My skills include:',
+              'HTML, CSS, JS, TS, React, React Native, Vue ...',
+              'Find my work below 👇'
+            ]} 
+            className='animate__animated animate__zoomIn'
+            />
         </div>
 
         <div ref={research} id='research'>
