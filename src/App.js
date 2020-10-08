@@ -19,9 +19,7 @@ import Section from './components/Section';
 import Footer from './components/Footer';
 import { useMediaQuery } from 'react-responsive';
 import Typing from './components/Typing';
-// import { Anchor } from 'antd';
-// const { Link } = Anchor;
-
+import './MobileButton.css';
 
 function App() {
 
@@ -251,7 +249,7 @@ function App() {
   const [isGame, setGame] = useState(false);
   const [isAbout, setAbout] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
   const resetNavigationState = () => {
     setResearch(false);
@@ -300,7 +298,12 @@ function App() {
   const about = useRef();
 
   const handleButtonClick = () => {
-    setIsMenuOpen(!isMenuOpen)
+    if(isMenuOpen) {
+      setButtonClasses("menu-btn");
+    } else {
+      setButtonClasses("menu-btn open");
+    }
+    setIsMenuOpen(!isMenuOpen);
   }
 
   return (
@@ -368,9 +371,11 @@ function App() {
             
               {/* mobile header  */}
               <div id='mobileHeader' style={{display: isMobileDevice ? "initial" : 'none'}}>
-                <div class="menu-btn" className={!isMenuOpen ? 'open' : 'none'} onClick={handleButtonClick} >
-                  <div class="menu-btn__burger"></div>
+
+                <div className={buttonClasses} onClick={handleButtonClick}>
+                  <div className='menu-btn__burger'></div>
                 </div>
+                
               </div>
 
             
