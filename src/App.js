@@ -16,8 +16,12 @@ import { useMediaQuery } from 'react-responsive';
 import Typing from './components/Typing/Typing';
 import { researchData, projectData, gameData } from './Data';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function App() {
+
+  smoothscroll.polyfill();
+  // window.__forceSmoothScrollPolyfill__ = true;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
@@ -69,7 +73,10 @@ function App() {
   const move = (e) => {
     let position = e.current.offsetTop;
     position -= isMobileDevice ? 100 : 50;
-    window.scrollTo({top: position, behavior: 'smooth' })
+    window.scroll({ top: position, behavior: 'smooth' });
+
+    // smoothscroll.polyfill({top: position, behavior: 'smooth' });
+    // window.scrollTo({top: position, behavior: 'smooth' })
   }
 
   const research = useRef();
@@ -217,8 +224,8 @@ function App() {
             <a href='https://github.com/chaozhang666'>
               <div className='githubBtnWapper' style={{width: '100%', textAlign: 'center'}}>
                 <div className='githubBtn'>
-                  <GitHubIcon className='icons' fontSize="large"/>
-                  <h3 style={{display:"inline-block"}}>Link to Github Account</h3>
+                  <GitHubIcon className='githubIcon' fontSize="large" />
+                  <h3 style={{display:"inline-block"}}>Link to my Github Account</h3>
                 </div>
               </div>
             </a>

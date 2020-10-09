@@ -2,6 +2,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .logo {
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -74,7 +76,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 25px;
+  padding: 10px 20px;
   margin-bottom: 80px;
   border: 2px #fff solid;
   border-radius: 20px;
@@ -86,4 +88,8 @@ hr {
 .githubBtn:hover {
   background-color: #fff;
   color: black;
+}
+
+.githubIcon {
+  margin: 10px;
 }
