@@ -61,3 +61,29 @@ hr {
 #research, #project, #game, #about{
   background-color: #131313;
 }
+
+.githubBtnWapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: -50px;
+}
+
+.githubBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  margin-bottom: 80px;
+  border: 2px #fff solid;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.7s;
+}
+
+.githubBtn:hover {
+  background-color: #fff;
+  color: black;
+}

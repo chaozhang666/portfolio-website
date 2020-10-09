@@ -15,6 +15,7 @@ import Footer from './components/Footer/Footer';
 import { useMediaQuery } from 'react-responsive';
 import Typing from './components/Typing/Typing';
 import { researchData, projectData, gameData } from './Data';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 function App() {
 
@@ -212,6 +213,16 @@ function App() {
                 </Typography>
               </Grid>
             </Grid>
+
+            <a href='https://github.com/chaozhang666'>
+              <div className='githubBtnWapper' style={{width: '100%', textAlign: 'center'}}>
+                <div className='githubBtn'>
+                  <GitHubIcon className='icons' fontSize="large"/>
+                  <h3 style={{display:"inline-block"}}>Link to Github Account</h3>
+                </div>
+              </div>
+            </a>
+
           </Container>
         </div>
       
