@@ -44,10 +44,14 @@ a {
 .nav-wrapper h1, .logo {
   padding: 12px 16px; 
   font-size: 22px;
+  border-radius: 20px;
 }
 
 .nav-wrapper h1:hover{
   cursor: pointer;
+  background-color: #fff;
+  color: #131313;
+  transition: 0.7s;
 }
 
 .logo:hover {
