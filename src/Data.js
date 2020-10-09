@@ -51,16 +51,16 @@ const projectData = [
     li: ['ReactJS & Ant Design']
   },  
   {
+    link: 'https://chi-noodlebar.com',
+    title: 'Mobile First Website',
+    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
+    li: ['Conditionally rendered contetns.']
+  },
+  {
     link: 'https://search-country-info-n3jtsvhvj.vercel.app',
     title: 'REST Countries Info',
     img: 'https://media.giphy.com/media/NwLRiAWGOi33R4SimS/giphy.gif',
     li: ['Restful API']
-  },
-  {
-    link: 'https://chi-noodlebar.com',
-    title: 'Responsive Website',
-    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
-    li: ['A noodle bar in Vancouver.']
   },
   {
     link: 'https://earnest.education',

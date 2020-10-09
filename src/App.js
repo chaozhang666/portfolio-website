@@ -21,7 +21,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 function App() {
 
   smoothscroll.polyfill();
-  // window.__forceSmoothScrollPolyfill__ = true;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
@@ -46,10 +45,6 @@ function App() {
     zIndex: 999,
     transition: 1
   }
-
-  // window.onscroll = () => {
-  //   console.log(document.documentElement.scrollTop);
-  // }
 
   const  handleNavigation = (e) => {
     switch(e.target.innerText) {
@@ -101,7 +96,7 @@ function App() {
 
   return (
     <div className="App">
-      <ThemeProvider ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <div style={webHeaderStyle}>
           <Container>
             <Box
@@ -112,11 +107,10 @@ function App() {
               className='animate__animated animate__zoomInRight'
             >
               <Typography 
-                className='nav-item' 
+                className='nav-item logo' 
                 variant='h4' 
                 onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}
                 dispaly='inline'
-                className='logo' 
               >
                 Portfolio
               </Typography>
@@ -160,8 +154,8 @@ function App() {
             </Box>
           </Container>
 
-          <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+          <div className="progress-container">
+            <div className="progress-bar" id="myBar"></div>
           </div>
 
           <div style={{display: isMenuOpen && isMobileDevice ? 'initial' : 'none'}}>
@@ -182,12 +176,13 @@ function App() {
             width='240px'
             className='animate__animated animate__zoomInDown'
             style={{marginBottom:100}}
+            alt='coding cat'
           />
           <Typing 
             strings={[
               "Hi, I'm Chao Zhang",
               'A Front End Developer 💡',
-              'My skills include:',
+              'My mastered skills include:',
               'HTML, CSS, JS, TS, React, React Native, Vue ...',
               'Find my work below 👇'
             ]} 
@@ -210,6 +205,7 @@ function App() {
         {/* about  */}
         <div ref={about} id='about' style={{paddingTop: '10px'}}>
           <h1 className='sectionTitle'>About Me</h1>
+          <h3 className='sectionSubTitle'> &lt; Developer · Instructor · Musician &gt;</h3>
           <hr />
           <Container>
             <Grid
@@ -226,7 +222,7 @@ function App() {
 
               <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
                 <Typography variant='h5'>
-                  I am also a coding instructor teaching students HTML, CSS, JavaScript, Python and Block Coding(Codemao & Scratch). I established a coding club in 2019 Sep to provide students online coding education. It lets students quickly learn the fundamental of different programming languages in a fun way.
+                  I am also a coding instructor teaching students HTML, CSS, JavaScript, Python and Block Coding (Codemao & Scratch). I established my own coding club in 2019 Sep to provide students with online coding education. It lets students quickly learn the fundamental of different programming languages in a fun way. So far, more than 200 students have enrolled in my courses.
                 </Typography>
               </Grid>
             </Grid>

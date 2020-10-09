@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import Typed from 'typed.js';
 import './Typing.css';
 
