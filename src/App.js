@@ -205,7 +205,7 @@ function App() {
         {/* about  */}
         <div ref={about} id='about' style={{paddingTop: '10px'}}>
           <h1 className='sectionTitle'>About Me</h1>
-          <h3 className='sectionSubTitle'> &lt; Developer · Instructor · Musician &gt;</h3>
+          <h3 className='sectionSubTitle' style={{padding: '0 30px'}}> &lt; Developer · Instructor · Musician &gt;</h3>
           <hr />
           <Container>
             <Grid
