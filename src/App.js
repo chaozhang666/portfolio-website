@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRef } from 'react';
+import { useState } from 'react';
 import './hover.css';
 import './App.css';
 import './Mobile.css';
-import { useState, useEffect } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
@@ -14,10 +14,12 @@ import Section from './components/Section/Section';
 import Footer from './components/Footer/Footer';
 import { useMediaQuery } from 'react-responsive';
 import Typing from './components/Typing/Typing';
-
 import { researchData, projectData, gameData } from './Data';
 
 function App() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
   const isMobileDevice = useMediaQuery({
     query: '(max-device-width: 768px)'
@@ -32,15 +34,17 @@ function App() {
   const webHeaderStyle = {
     backgroundColor: 'black',
     color: '#fff',
-    padding: 10,
+    padding: isMobileDevice ? 10 : 20,
     position: 'fixed', 
     top: 0,
     width: '100%',
-    zIndex: 999
+    zIndex: 999,
+    transition: 1
   }
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [buttonClasses, setButtonClasses] = useState("menu-btn");
+  // window.onscroll = () => {
+  //   console.log(document.documentElement.scrollTop);
+  // }
 
   const  handleNavigation = (e) => {
     switch(e.target.innerText) {
@@ -63,7 +67,7 @@ function App() {
 
   const move = (e) => {
     let position = e.current.offsetTop;
-    position -= isMobileDevice ? 100 : 0;
+    position -= isMobileDevice ? 100 : 50;
     window.scrollTo({top: position, behavior: 'smooth' })
   }
 
