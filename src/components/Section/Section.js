@@ -20,9 +20,11 @@ export default function Section(props) {
       <Container>
         <div>
           <h1 className='sectionTitle' 
-          data-aos="zoom-in" data-aos-once="true"
+          data-aos="zoom-in" data-aos-once="false"
           >{props.name}</h1>
-          <hr />
+          <h3 data-aos="fade-in" data-aos-once="false" 
+          className='sectionSubTitle'>{props.subtitle}</h3>
+          <hr data-aos="fade-in" data-aos-once="false" />
           <Grid
             container
             direction="row"

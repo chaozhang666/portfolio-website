@@ -9,3 +9,11 @@
   text-align: center;
   margin-top: 100px;
 }
+
+.sectionSubTitle {
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 24px;
+  /* width: 50%; */
+}

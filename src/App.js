@@ -74,9 +74,6 @@ function App() {
     let position = e.current.offsetTop;
     position -= isMobileDevice ? 100 : 50;
     window.scroll({ top: position, behavior: 'smooth' });
-
-    // smoothscroll.polyfill({top: position, behavior: 'smooth' });
-    // window.scrollTo({top: position, behavior: 'smooth' })
   }
 
   const research = useRef();
@@ -186,15 +183,15 @@ function App() {
         </div>
 
         <div ref={research} id='research'>
-          <Section data={researchData} name='Research' />
+          <Section data={researchData} name='Research' subtitle='< Some of my original research paper and proejcts. >' />
         </div>
 
         <div ref={project} id='project'>
-          <Section data={projectData} name='Project' />
+          <Section data={projectData} name='Project' subtitle='< Some of my open source projects and web teaching documents. >' />
         </div>
 
         <div ref={game} id='game'>
-          <Section data={gameData}  name='Game' />
+          <Section data={gameData}  name='Game'  subtitle='< Self-made games for block coding teaching >' />
         </div>
 
         {/* about  */}
@@ -221,15 +218,16 @@ function App() {
               </Grid>
             </Grid>
 
-            <a href='https://github.com/chaozhang666'>
+            
               <div className='githubBtnWapper' style={{width: '100%', textAlign: 'center'}}>
-                <div className='githubBtn'>
-                  <GitHubIcon className='githubIcon' fontSize="large" />
-                  <h3 style={{display:"inline-block"}}>Link to my Github Account</h3>
-                </div>
+                <a href='https://github.com/chaozhang666'>
+                  <div className='githubBtn'>
+                    <GitHubIcon className='githubIcon' fontSize="large" />
+                    <h3 style={{display:"inline-block"}}>Link to my Github Account</h3>
+                  </div>
+                </a>
               </div>
-            </a>
-
+            
           </Container>
         </div>
       
