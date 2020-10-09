@@ -76,6 +76,15 @@ function App() {
     window.scroll({ top: position, behavior: 'smooth' });
   }
 
+  // scroll progress bar 
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+
   const research = useRef();
   const project = useRef();
   const game = useRef();
@@ -150,6 +159,10 @@ function App() {
               </div>  
             </Box>
           </Container>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
 
           <div style={{display: isMenuOpen && isMobileDevice ? 'initial' : 'none'}}>
             <div className='mobil-nav animate__animated animate__fadeInRight'>

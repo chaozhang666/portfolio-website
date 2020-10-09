@@ -2,8 +2,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .logo {
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -51,7 +49,7 @@ a {
   cursor: pointer;
   background-color: #fff;
   color: #131313;
-  transition: 0.7s;
+  transition: 1s;
 }
 
 .logo:hover {
@@ -96,4 +94,21 @@ hr {
 
 .githubIcon {
   margin: 10px;
+}
+
+/* The progress container */
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: black;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  position: absolute;
+  top: 18px;
+  height: 4px;
+  background: #fff;
+  width: 0%;
 }
