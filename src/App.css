@@ -49,7 +49,7 @@ a {
   cursor: pointer;
   background-color: #fff;
   color: #131313;
-  transition: 1s;
+  transition: 0.7s;
 }
 
 .logo:hover {

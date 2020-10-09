@@ -38,12 +38,13 @@ function App() {
   const webHeaderStyle = {
     backgroundColor: 'black',
     color: '#fff',
-    padding: isMobileDevice ? 10 : 20,
+    padding: isMobileDevice ? 10 : 15,
     position: 'fixed', 
     top: 0,
     width: '100%',
     zIndex: 999,
-    transition: 1
+    transition: 1,
+    opacity: '0.9'
   }
 
   const  handleNavigation = (e) => {
