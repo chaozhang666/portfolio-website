@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.3",
-    "@types/react-responsive": "^8.0.2"
+    "@types/react-responsive": "^8.0.2",
+    "@types/smoothscroll-polyfill": "^0.3.1"
   }
 }

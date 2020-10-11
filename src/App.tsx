@@ -34,7 +34,7 @@ function App() {
     }
   });
 
-  const webHeaderStyle = {
+  const webHeaderStyle : any = {
     backgroundColor: 'black',
     color: '#fff',
     padding: isMobileDevice ? 10 : 15,
@@ -46,7 +46,7 @@ function App() {
     opacity: '0.9'
   }
 
-  const  handleNavigation = (e) => {
+  const  handleNavigation = (e : any) => {
     switch(e.target.innerText) {
       case 'Research': 
         move(research)
@@ -65,7 +65,7 @@ function App() {
     }
   }
 
-  const move = (e) => {
+  const move = (e : any) => {
     let position = e.current.offsetTop;
     position -= isMobileDevice ? 100 : 50;
     window.scroll({ top: position, behavior: 'smooth' });
@@ -77,13 +77,14 @@ function App() {
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
+    const myElement = document.getElementById('myBar')!;
+    myElement.style.width = scrolled + "%";
   }
 
-  const research = useRef();
-  const project = useRef();
-  const game = useRef();
-  const about = useRef();
+  const research = useRef<HTMLInputElement>(null);
+  const project = useRef<HTMLInputElement>(null);
+  const game = useRef<HTMLInputElement>(null);
+  const about = useRef<HTMLInputElement>(null);
 
   const handleButtonClick = () => {
     if(isMenuOpen) {
@@ -106,15 +107,7 @@ function App() {
               alignItems='center'
               className='animate__animated animate__zoomInRight'
             >
-              <Typography 
-                className='nav-item logo' 
-                variant='h4' 
-                onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}
-                dispaly='inline'
-              >
-                Portfolio
-              </Typography>
-
+              <h1 id='logo' onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}>Portfolio</h1>
               <Box className='nav-wrapper'>            
                   <Typography
                     variant='h1'
@@ -198,7 +191,7 @@ function App() {
           <Section data={projectData} name='Project' subtitle='< Some of my open source projects and web teaching documents. >' />
         </div>
 
-        <div ref={game} id='game'>
+        <div ref= {game} id='game'>
           <Section data={gameData}  name='Game'  subtitle='< Self-made games for block coding teaching >' />
         </div>
 
