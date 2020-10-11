@@ -1,4 +1,3 @@
-import './hover.css';
 import './App.css';
 import './Mobile.css';
 import React from 'react';
