@@ -7,7 +7,7 @@ import './Section.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Section(props) {
+export default function Section(props : any) {
 
   AOS.init();
 
@@ -31,7 +31,7 @@ export default function Section(props) {
             justify="center"
             alignItems="center"
           >
-            {props.data.map(e => 
+            {props.data.map((e : any) => 
               <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice ? 20 : 30 }}>
                 <Card 
                   name={e.title} 

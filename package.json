@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.3",
     "@types/react-responsive": "^8.0.2"
   }
 }
