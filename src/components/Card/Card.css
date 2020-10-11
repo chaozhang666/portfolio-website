@@ -14,7 +14,17 @@
   color: white;
 }
 
-.title {
+.cardTitle {
   margin-bottom: 30px;
   text-align: center;
+}
+
+.listWrapper {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
 }
