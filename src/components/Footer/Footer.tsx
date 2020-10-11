@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { Box } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
 import { useMediaQuery } from 'react-responsive';
 import './Footer.css'
 import EmailIcon from '@material-ui/icons/Email';
@@ -15,22 +14,9 @@ export default function Footer() {
     query: '(max-device-width: 1224px)'
   })
 
-  const rootStyle = {
-    textAlign: 'center',
-    backgroundColor: 'black',
-    color: '#fff',
-    fontSize: '20px',
-    padding: '30px'
-  }
-
-  const titleStyle = {
-    marginBottom: '14px',
-    fontSize: '28px'
-  }
-
   return (
     <div>
-      <Box style={rootStyle}>
+      <Box className='container'>
         <Container>
           <Grid    
             container
@@ -39,21 +25,12 @@ export default function Footer() {
             alignItems="center"
           >
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30x' }}>
-              <Typography variant='h5' style={titleStyle}>
-                Location
-              </Typography>
-              <Typography variant='p'>
-                Metrotown, Burnaby, BC
-              </Typography>
-              <br />
-              <Typography variant='p'>
-                V5H 4N2
-              </Typography>
+              <h1 className='title'>Location</h1>
+              <h4>Metrotown, Burnaby, BC</h4>
+              <h4>V5H 4N2</h4>
             </Grid>
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30x' }}>
-              <Typography variant='h5' style={titleStyle}>
-              Around Me
-              </Typography>
+              <h1 className='title'>Around Me</h1>
               <a href="mailto: raidenchao@gmail.com">
                 <EmailIcon className='icons' fontSize="large"/>
               </a>
@@ -65,12 +42,8 @@ export default function Footer() {
               </a>     
             </Grid>
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30px' }}>
-              <Typography variant='h5' style={titleStyle}>
-                Contact Me
-              </Typography>
-              <Typography variant='p'>
-                Please feel free to contact me if you are interested in my projects.
-              </Typography>
+              <h1 className='title'>Contact Me</h1>
+              <h4>Please feel free to contact me if you are interested in my projects.</h4>
             </Grid>
           </Grid>
           
