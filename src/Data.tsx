@@ -74,48 +74,48 @@ const projectData = [
     img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
     li: ['Online vocabulary testing.']
   },
-  {
-    link: 'https://speech-recognition.chaozhang.vercel.app',
-    title: 'Speach Recognition',
-    img: 'https://media.giphy.com/media/HDmiGSoYfUImCRCL2S/giphy.gif',
-    li: ['window.SpeechRecognition']
-  },
+  // {
+  //   link: 'https://speech-recognition.chaozhang.vercel.app',
+  //   title: 'Speach Recognition',
+  //   img: 'https://media.giphy.com/media/HDmiGSoYfUImCRCL2S/giphy.gif',
+  //   li: ['window.SpeechRecognition']
+  // },
   {
     link: 'https://remix-demo-chao.vercel.app',
     title: 'Music Remix',
     img: 'https://media.giphy.com/media/iFPQSxCPmEzeHTmaLE/giphy.gif',
     li: ['Online musical instruments.']
-  },
-  {
-    link: 'https://to-do-list-peach.vercel.app',
-    title: 'Todo List',
-    img: 'https://media.giphy.com/media/ONyxD52Z8EXKYqxfq8/giphy.gif',
-    li: ['Vanilla JS']
-  },
-  {
-    link: 'https://speed-typer.chaozhang.vercel.app',
-    title: 'Speed Typer',
-    img: 'https://media.giphy.com/media/ftpqOvDp71pp7xhGqH/giphy.gif',
-    li: ['Typing game with diffenent levels.']
-  },
-  {
-    link: 'https://exchange-rate-calculator.vercel.app',
-    title: 'Exchange Rate Calculator',
-    img: 'https://media.giphy.com/media/fvefr3DhTQxCISeLo0/giphy.gif',
-    li: ['Live exchange rate API.']
-  },
-  {
-    link: 'https://javascript-slides.now.sh',
-    title: 'JavaScript Slider',
-    img: 'https://media.giphy.com/media/KBBMSwABohGtpBWd9m/giphy.gif',
-    li: ['Based on slides.com library.']
-  },
-  {
-    link: 'https://qqzhang.vercel.app',
-    title: 'Web Teaching',
-    img: 'https://media.giphy.com/media/9N4coJidDjycT1eeay/giphy.gif',
-    li: ['Introduction to HTML & CSS']
   }
+  // {
+  //   link: 'https://to-do-list-peach.vercel.app',
+  //   title: 'Todo List',
+  //   img: 'https://media.giphy.com/media/ONyxD52Z8EXKYqxfq8/giphy.gif',
+  //   li: ['Vanilla JS']
+  // },
+  // {
+  //   link: 'https://speed-typer.chaozhang.vercel.app',
+  //   title: 'Speed Typer',
+  //   img: 'https://media.giphy.com/media/ftpqOvDp71pp7xhGqH/giphy.gif',
+  //   li: ['Typing game with diffenent levels.']
+  // },
+  // {
+  //   link: 'https://exchange-rate-calculator.vercel.app',
+  //   title: 'Exchange Rate Calculator',
+  //   img: 'https://media.giphy.com/media/fvefr3DhTQxCISeLo0/giphy.gif',
+  //   li: ['Live exchange rate API.']
+  // },
+  // {
+  //   link: 'https://javascript-slides.now.sh',
+  //   title: 'JavaScript Slider',
+  //   img: 'https://media.giphy.com/media/KBBMSwABohGtpBWd9m/giphy.gif',
+  //   li: ['Based on slides.com library.']
+  // },
+  // {
+  //   link: 'https://qqzhang.vercel.app',
+  //   title: 'Web Teaching',
+  //   img: 'https://media.giphy.com/media/9N4coJidDjycT1eeay/giphy.gif',
+  //   li: ['Introduction to HTML & CSS']
+  // }
 ];
 
 const gameData = [
@@ -190,19 +190,19 @@ const gameData = [
     title: 'Square Dash',
     img: 'https://media.giphy.com/media/W0c6V824Q5XLHVFkrr/giphy.gif',
     li: ['Dash game with different props.']
-  },
-  {
-    link: 'https://shequ.codemao.cn/work/38147591',
-    title: 'No BB Fly',
-    img: 'https://media.giphy.com/media/TLUbkUiYFC1fZxQkvS/giphy.gif',
-    li: ['Codemao start project.']
-  }, 
-  {
-    link: 'https://shequ.codemao.cn/work/55306453',
-    title: 'Block Tower',
-    img: 'https://media.giphy.com/media/j5zwAHn8VZIYPZwjF0/giphy.gif',
-    li: ['CodeMao Sandbox Project.']
-  },
+  }
+  // {
+  //   link: 'https://shequ.codemao.cn/work/38147591',
+  //   title: 'No BB Fly',
+  //   img: 'https://media.giphy.com/media/TLUbkUiYFC1fZxQkvS/giphy.gif',
+  //   li: ['Codemao start project.']
+  // }, 
+  // {
+  //   link: 'https://shequ.codemao.cn/work/55306453',
+  //   title: 'Block Tower',
+  //   img: 'https://media.giphy.com/media/j5zwAHn8VZIYPZwjF0/giphy.gif',
+  //   li: ['CodeMao Sandbox Project.']
+  // },
 ];
 
 export {researchData, projectData, gameData};

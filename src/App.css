@@ -11,7 +11,7 @@ a {
 
 #logo {
   text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
-  font-size: 38px;
+  font-size: 34px;
 }
 
 #logo:hover {
@@ -29,7 +29,7 @@ a {
 }
 
 .navigation {
-  padding: 20px;
+  padding: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +89,7 @@ hr {
   border-radius: 20px;
   color: #fff;
   font-size: 18px;
-  transition: 0.7s;
+  transition: 0.9s;
 }
 
 .githubBtn:hover {
