@@ -26,8 +26,7 @@ class Typing extends React.Component {
   render() {
 
     const textStyle = {
-      color: '#fff',
-      fontSize: '30px',
+      fontSize: '26px',
       padding: 20
     }
 
@@ -36,6 +35,7 @@ class Typing extends React.Component {
         <div className="type-wrap">
           <span
             style={textStyle}
+            className='myTextShadow'
             ref={(el) => { this.el = el; }}
           />
         </div>

@@ -2,20 +2,19 @@
   .nav-wrapper {
     display: none;
   }
-
   .progress-bar {
     top: 8px;
   }
 }
 
-.mobil-nav {
-  padding: 20px;
+.mobile-nav {
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.mobil-nav h1 {
+.mobile-nav h1 {
   text-align: center;
   display: inline-block;
   font-size: 22px;
@@ -26,26 +25,25 @@
   width: 80px;
   height: 40px;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   cursor: pointer;
-  /* border: 5px solid #fff; */
   transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  margin-left: 40px;
 }
 
 .menu-btn__burger,
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   width: 35px;
-  height: 5px;
-
+  height: 3px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: black;
   box-shadow: 0 2px 5px var(--box-shadow-color);
-
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before,

@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <div>
-      <Box className='container'>
+      <Box className='footer-container myBoxShadow'>
         <Container>
           <Grid    
             container
@@ -25,12 +25,12 @@ export default function Footer() {
             alignItems="center"
           >
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30x' }}>
-              <h1 className='title'>Location</h1>
-              <h4>Metrotown, Burnaby, BC</h4>
-              <h4>V5H 4N2</h4>
+              <h1 className='title myTextShadow'>Location</h1>
+              <h4 className='myTextShadow'>Metrotown, Burnaby, BC</h4>
+              <h4 className='myTextShadow'>V5H 4N2</h4>
             </Grid>
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30x' }}>
-              <h1 className='title'>Around Me</h1>
+              <h1 className='title myTextShadow'>Around Me</h1>
               <a href="mailto: raidenchao@gmail.com">
                 <EmailIcon className='icons' fontSize="large"/>
               </a>
@@ -42,13 +42,13 @@ export default function Footer() {
               </a>     
             </Grid>
             <Grid item xs={12} sm={4} style={{padding: isTabletOrMobileDevice? '20px' : '30px' }}>
-              <h1 className='title'>Contact Me</h1>
-              <h4>Please feel free to contact me if you are interested in my projects.</h4>
+              <h1 className='title myTextShadow'>Contact Me</h1>
+              <h4 className='myTextShadow'>Please feel free to contact me if you are interested in my projects.</h4>
             </Grid>
           </Grid>
           
         </Container>
-        <p style={{marginTop: '30px', fontSize: 16}}>© 2020 Chao Zhang</p>
+        <p className='myTextShadow' style={{marginTop: '30px', fontSize: 16}}>© 2020 Chao Zhang</p>
       </Box>
     </div>
   )

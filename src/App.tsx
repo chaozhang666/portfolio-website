@@ -36,8 +36,8 @@ function App() {
   });
 
   const webHeaderStyle : any = {
-    backgroundColor: 'black',
-    color: '#fff',
+    backgroundColor: '#f1f3f6',
+    color: 'black',
     paddingTop: headerPadding,
     paddingBottom: headerPadding,
     paddingLeft: 20,
@@ -46,8 +46,7 @@ function App() {
     top: 0,
     width: '100%',
     zIndex: 999,
-    transition: '0.8s',
-    opacity: '0.9'
+    transition: '0.7s',
   }
 
   const  handleNavigation = (e : any) => {
@@ -107,7 +106,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <div style={webHeaderStyle}>
+        <div style={webHeaderStyle} className={headerPadding === 20 ? 'myBoxShadow' : ''}>
           <Container>
             <Box
               display='flex'
@@ -116,33 +115,33 @@ function App() {
               alignItems='center'
               className='animate__animated animate__zoomInRight'
             >
-              <h1 id='logo' onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}>Portfolio</h1>
+              <h1 id='logo' className='myTextShadow' onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}>Portfolio</h1>
               <Box className='nav-wrapper'>            
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
-                    className='nav-item'
+                    className='nav-item myTextShadow'
                   >
                     Research
                   </Typography>
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
-                    className='nav-item'
+                    className='nav-item myTextShadow'
                   >
                     Project
                   </Typography>
                   <Typography 
                     variant='h1'
                     onClick={handleNavigation}
-                    className='nav-item'
+                    className='nav-item myTextShadow'
                   >
                     Game
                   </Typography>
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
-                    className='nav-item'
+                    className='nav-item myTextShadow'
                   >
                     About
                   </Typography>
@@ -161,11 +160,11 @@ function App() {
           </div>
 
           <div style={{display: isMenuOpen && isMobileDevice ? 'initial' : 'none'}}>
-            <div className='mobil-nav animate__animated animate__fadeInRight'>
-                <h1 onClick={handleNavigation}>Research</h1>
-                <h1 onClick={handleNavigation}>Project</h1>
-                <h1 onClick={handleNavigation}>Game</h1>
-                <h1 onClick={handleNavigation}>About</h1>
+            <div className='mobile-nav animate__animated animate__fadeInRight'>
+                <h1 className='myTextShadow' onClick={handleNavigation}>Research</h1>
+                <h1 className='myTextShadow' onClick={handleNavigation}>Project</h1>
+                <h1 className='myTextShadow' onClick={handleNavigation}>Game</h1>
+                <h1 className='myTextShadow' onClick={handleNavigation}>About</h1>
             </div>
           </div>
 
@@ -206,24 +205,23 @@ function App() {
 
         {/* about  */}
         <div ref={about} id='about' style={{paddingTop: '10px'}}>
-          <h1 className='sectionTitle'>About Me</h1>
-          <h3 className='sectionSubTitle' style={{padding: '0 30px'}}> &lt; A Creative Developer &gt;</h3>
-          <hr />
+          <h1 className='sectionTitle myTextShadow'>About Me</h1>
+          <h3 className='sectionSubTitle myTextShadow' style={{padding: '0 30px'}}> &lt; A Creative Developer &gt;</h3>
           <Container>
             <Grid
               container
               direction="row"
               justify="center"
-              style={{paddingBottom:'80px',color: '#fff'}}
+              style={{paddingBottom:'80px'}}
             >
               <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
-                <Typography variant='h5'>
+                <Typography variant='h5' className='myTextShadow'>
                   I am a professional Software Developer with M.Sc in Computer Science. Currently, I am working as a Front End Developer. I am a big fan of Javascript & Typescript. In my spare time, I love making some fun projects, teaching students coding and playing guitar.
                 </Typography>
               </Grid>
 
               <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
-                <Typography variant='h5'>
+                <Typography variant='h5' className='myTextShadow'>
                   I have established my own coding club since 2019 Sep to provide students with online coding education which lets students quickly learn the fundamental of different programming languages in a fun way. So far, more than 200 students have enrolled in my courses.
                 </Typography>
               </Grid>
@@ -231,9 +229,9 @@ function App() {
 
               <div className='githubBtnWapper' style={{width: '100%', textAlign: 'center'}}>
                 <a href='https://github.com/chaozhang666'>
-                  <div className='githubBtn'>
+                  <div className='githubBtn myBoxShadow'>
                     <GitHubIcon className='githubIcon' fontSize="large" />
-                    <h3 style={{display:"inline-block"}}>Link to my Github Account</h3>
+                    <h3 className='myTextShadow' style={{display:"inline-block"}}>Link to my Github Account</h3>
                   </div>
                 </a>
               </div>
