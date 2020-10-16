@@ -113,7 +113,7 @@ function App() {
               flexDirection='row'
               justifyContent="space-between"
               alignItems='center'
-              className='animate__animated animate__zoomInRight'
+              className='animate__animated animate__zoomInRight animate__delay-1s'
             >
               <h1 id='logo' className='myTextShadow' onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}>Portfolio</h1>
               <Box className='nav-wrapper'>            
