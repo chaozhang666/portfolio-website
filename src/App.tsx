@@ -161,8 +161,8 @@ function App() {
 
           <div style={{display: isMenuOpen && isMobileDevice ? 'initial' : 'none'}}>
             <div className='mobile-nav animate__animated animate__fadeInRight'>
-                <h1 className='myTextShadow' onClick={handleNavigation}>Research</h1>
                 <h1 className='myTextShadow' onClick={handleNavigation}>Project</h1>
+                <h1 className='myTextShadow' onClick={handleNavigation}>Research</h1>
                 {/* <h1 className='myTextShadow' onClick={handleNavigation}>Game</h1> */}
                 <h1 className='myTextShadow' onClick={handleNavigation}>About</h1>
             </div>
