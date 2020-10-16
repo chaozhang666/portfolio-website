@@ -122,22 +122,22 @@ function App() {
                     onClick={handleNavigation}
                     className='nav-item myTextShadow'
                   >
-                    Research
+                    Project
                   </Typography>
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item myTextShadow'
                   >
-                    Project
+                    Research
                   </Typography>
-                  <Typography 
+                  {/* <Typography 
                     variant='h1'
                     onClick={handleNavigation}
                     className='nav-item myTextShadow'
                   >
                     Game
-                  </Typography>
+                  </Typography> */}
                   <Typography
                     variant='h1'
                     onClick={handleNavigation}
@@ -163,7 +163,7 @@ function App() {
             <div className='mobile-nav animate__animated animate__fadeInRight'>
                 <h1 className='myTextShadow' onClick={handleNavigation}>Research</h1>
                 <h1 className='myTextShadow' onClick={handleNavigation}>Project</h1>
-                <h1 className='myTextShadow' onClick={handleNavigation}>Game</h1>
+                {/* <h1 className='myTextShadow' onClick={handleNavigation}>Game</h1> */}
                 <h1 className='myTextShadow' onClick={handleNavigation}>About</h1>
             </div>
           </div>
@@ -191,17 +191,17 @@ function App() {
             />
         </div>
 
+        <div ref={project} id='project'>
+          <Section data={projectData} name='Project' subtitle='< Some of my previous work and open source projects. >' />
+        </div>
+
         <div ref={research} id='research'>
           <Section data={researchData} name='Research' subtitle='< Some of my original research paper and proejcts. >' />
         </div>
 
-        <div ref={project} id='project'>
-          <Section data={projectData} name='Project' subtitle='< Some of my open source projects and web teaching documents. >' />
-        </div>
-
-        <div ref= {game} id='game'>
+        {/* <div ref= {game} id='game'>
           <Section data={gameData}  name='Game'  subtitle='< Self-made games by CodeMao for block coding education >' />
-        </div>
+        </div> */}
 
         {/* about  */}
         <div ref={about} id='about' style={{paddingTop: '10px'}}>
@@ -216,13 +216,14 @@ function App() {
             >
               <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
                 <Typography variant='h5' className='myTextShadow'>
-                  I am a professional Software Developer with M.Sc in Computer Science. Currently, I am working as a Front End Developer. I am a big fan of Javascript & Typescript. In my spare time, I love making some fun projects, teaching students coding and playing guitar.
+                  I am a professional Software Developer with M.Sc in Computer Science. Currently, I am working as a Front End Developer. In my spare time, I love making some fun projects, teaching students coding and playing guitar.
                 </Typography>
               </Grid>
 
               <Grid item xs={12} sm={4} style={{padding:'20px', textAlign: 'justify'}}>
                 <Typography variant='h5' className='myTextShadow'>
-                  I have established my own coding club since 2019 Sep to provide students with online coding education which lets students quickly learn the fundamental of different programming languages in a fun way. So far, more than 200 students have enrolled in my courses.
+                  I established my own coding club in 2019 Sep to provide students with online coding education. It lets students quickly learn the fundamental of different programming languages in a fun way. 
+                  {/* So far, more than 200 students have enrolled in my courses. */}
                 </Typography>
               </Grid>
             </Grid>

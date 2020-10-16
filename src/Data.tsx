@@ -9,7 +9,7 @@ const researchData = [
     link: 'https://github.com/zzzchaozzz/Steganography',
     title: 'Steganography',
     img: IMGsss,
-    li: ['New steganography algorithm.']
+    li: ['Self-created algorithm.']
   },
   {
     link: 'https://github.com/zzzchaozzz/GIS-NavigationToolboxDevelopment',
@@ -45,77 +45,41 @@ const researchData = [
 
 const projectData = [
   {
+    link: 'https://gophonebox.com',
+    title: 'E-Commerce Site',
+    img: 'https://media.giphy.com/media/LfzFc32cq1L75RSxsM/giphy.gif',
+    li: ['Mobile first bilingual website.']
+  },  
+  {
+    link: 'https://chi-noodlebar.com',
+    title: 'Mobile First Website',
+    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
+    li: ['Conditionally rendered contents.']
+  },
+  {
+    link: 'https://earnest.education',
+    title: 'Responsive Website',
+    img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
+    li: ['A static content site.']
+  },
+  {
     link: 'https://web-dev-tutorial-eo8ezjk5c.vercel.app',
     title: 'Web Dev Tutorial',
     img: 'https://media.giphy.com/media/KwzTxTAFuiXKQ7ebri/giphy.gif',
     li: ['ReactJS & Ant Design']
   },  
   {
-    link: 'https://chi-noodlebar.com',
-    title: 'Mobile First Website',
-    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
-    li: ['Conditionally rendered contetns.']
+    link: 'https://vocabulary-online-testing.vercel.app',
+    title: 'Testing Quiz',
+    img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
+    li: ['Online vocabulary testing app.']
   },
   {
     link: 'https://search-country-info-n3jtsvhvj.vercel.app',
     title: 'REST Countries Info',
     img: 'https://media.giphy.com/media/NwLRiAWGOi33R4SimS/giphy.gif',
     li: ['Restful API']
-  },
-  {
-    link: 'https://earnest.education',
-    title: 'Responsive Website',
-    img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
-    li: ['An education company in Richmond.']
-  },
-  {
-    link: 'https://vocabulary-online-testing.vercel.app',
-    title: 'Testing Quiz',
-    img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
-    li: ['Online vocabulary testing.']
-  },
-  // {
-  //   link: 'https://speech-recognition.chaozhang.vercel.app',
-  //   title: 'Speach Recognition',
-  //   img: 'https://media.giphy.com/media/HDmiGSoYfUImCRCL2S/giphy.gif',
-  //   li: ['window.SpeechRecognition']
-  // },
-  {
-    link: 'https://remix-demo-chao.vercel.app',
-    title: 'Music Remix',
-    img: 'https://media.giphy.com/media/iFPQSxCPmEzeHTmaLE/giphy.gif',
-    li: ['Online musical instruments.']
   }
-  // {
-  //   link: 'https://to-do-list-peach.vercel.app',
-  //   title: 'Todo List',
-  //   img: 'https://media.giphy.com/media/ONyxD52Z8EXKYqxfq8/giphy.gif',
-  //   li: ['Vanilla JS']
-  // },
-  // {
-  //   link: 'https://speed-typer.chaozhang.vercel.app',
-  //   title: 'Speed Typer',
-  //   img: 'https://media.giphy.com/media/ftpqOvDp71pp7xhGqH/giphy.gif',
-  //   li: ['Typing game with diffenent levels.']
-  // },
-  // {
-  //   link: 'https://exchange-rate-calculator.vercel.app',
-  //   title: 'Exchange Rate Calculator',
-  //   img: 'https://media.giphy.com/media/fvefr3DhTQxCISeLo0/giphy.gif',
-  //   li: ['Live exchange rate API.']
-  // },
-  // {
-  //   link: 'https://javascript-slides.now.sh',
-  //   title: 'JavaScript Slider',
-  //   img: 'https://media.giphy.com/media/KBBMSwABohGtpBWd9m/giphy.gif',
-  //   li: ['Based on slides.com library.']
-  // },
-  // {
-  //   link: 'https://qqzhang.vercel.app',
-  //   title: 'Web Teaching',
-  //   img: 'https://media.giphy.com/media/9N4coJidDjycT1eeay/giphy.gif',
-  //   li: ['Introduction to HTML & CSS']
-  // }
 ];
 
 const gameData = [
