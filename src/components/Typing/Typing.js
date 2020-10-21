@@ -35,7 +35,7 @@ class Typing extends React.Component {
         <div className="type-wrap">
           <span
             style={textStyle}
-            className='myTextShadow'
+            // className='myTextShadow'
             ref={(el) => { this.el = el; }}
           />
         </div>

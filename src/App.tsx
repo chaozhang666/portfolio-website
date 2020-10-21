@@ -113,9 +113,14 @@ function App() {
               flexDirection='row'
               justifyContent="space-between"
               alignItems='center'
-              className='animate__animated animate__zoomInRight animate__delay-1s'
+              className='animate__animated animate__zoomInRight'
             >
-              <h1 id='logo' className='myTextShadow' onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}>Portfolio</h1>
+              <h1 id='logo' 
+                // className='myTextShadow' 
+                onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })}}
+              >
+                Portfolio
+              </h1>
               <Box className='nav-wrapper'>            
                   <Typography
                     variant='h1'
@@ -182,9 +187,9 @@ function App() {
           <Typing 
             strings={[
               "Hi, I'm Chao Zhang",
-              'A Front End Developer 💡',
+              'A Software Developer 💡',
               'My mastered skills include:',
-              'HTML, CSS, JS, TS, jQuery, React, React Native, Vue ...',
+              'HTML, CSS, JavaScript, TypeScript, jQuery, React, React Native, Vue, Python ...',
               'Find my work below 👇'
             ]} 
             className='animate__animated animate__zoomIn'
