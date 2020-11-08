@@ -45,6 +45,12 @@ const researchData = [
 
 const projectData = [
   {
+    link: 'https://codingfun.dev',
+    title: 'Coding Tutorial Doc',
+    img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
+    li: ['Made by VuePress.']
+  },  
+  {
     link: 'https://gophonebox.com',
     title: 'E-Commerce Site',
     img: 'https://media.giphy.com/media/LfzFc32cq1L75RSxsM/giphy.gif',
@@ -73,12 +79,6 @@ const projectData = [
     title: 'Testing Quiz',
     img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
     li: ['Online vocabulary testing app.']
-  },
-  {
-    link: 'https://search-country-info-n3jtsvhvj.vercel.app',
-    title: 'REST Countries Info',
-    img: 'https://media.giphy.com/media/NwLRiAWGOi33R4SimS/giphy.gif',
-    li: ['Restful API']
   }
 ];
 
