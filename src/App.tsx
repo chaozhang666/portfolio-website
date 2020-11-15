@@ -200,10 +200,9 @@ function App() {
             strings={[
               "Hi, I'm Chao Zhang",
               "A Software Developer 💡",
-              "Focus on front end development",
+              "Focus on Frontend Development and UI Design",
               "Find my work below 👇",
             ]}
-            className="animate__animated animate__zoomIn"
           />
         </div>
 
@@ -222,10 +221,6 @@ function App() {
             subtitle="< Some of my original research paper and proejcts. >"
           />
         </div>
-
-        {/* <div ref= {game} id='game'>
-          <Section data={gameData}  name='Game'  subtitle='< Self-made games by CodeMao for block coding education >' />
-        </div> */}
 
         {/* about  */}
         <div ref={about} id="about" style={{ paddingTop: "10px" }}>
@@ -266,7 +261,7 @@ function App() {
               >
                 <Typography variant="h5" className="myTextShadow">
                   I established{" "}
-                  <a href="https://codingfun.dev/" style={{ color: "#ad770a" }}>
+                  <a href="https://codingfun.dev/" style={{ color: "#ad610a" }}>
                     Coding Fun Education
                   </a>{" "}
                   in 2019 Sep to provide students with online coding education.
