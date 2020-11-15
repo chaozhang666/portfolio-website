@@ -201,7 +201,7 @@ function App() {
               "Hi, I'm Chao Zhang",
               "A Software Developer 💡",
               "Focus on Frontend Development and UI Design",
-              "Find my work below 👇",
+              "Find my work below 👇🏻",
             ]}
           />
         </div>

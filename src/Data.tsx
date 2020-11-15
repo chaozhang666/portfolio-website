@@ -48,37 +48,37 @@ const projectData = [
     link: 'https://codingfun.dev',
     title: 'Coding Tutorial Doc',
     img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
-    li: ['Made by VuePress.']
+    li: ['VuePress | MarkDown | Vue.js']
   },  
   {
     link: 'https://gophonebox.com',
     title: 'E-Commerce Site',
     img: 'https://media.giphy.com/media/LfzFc32cq1L75RSxsM/giphy.gif',
-    li: ['Mobile first bilingual website.']
+    li: ['Mobile first bilingual website']
   },  
   {
     link: 'https://chi-noodlebar.com',
     title: 'Mobile First Website',
     img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
-    li: ['Conditionally rendered contents.']
+    li: ['Conditionally rendered contents']
   },
   {
     link: 'https://earnest.education',
     title: 'Responsive Website',
     img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
-    li: ['A static content site.']
+    li: ['A static content site']
   },
   {
     link: 'https://web-dev-tutorial-eo8ezjk5c.vercel.app',
     title: 'Web Dev Tutorial',
     img: 'https://media.giphy.com/media/KwzTxTAFuiXKQ7ebri/giphy.gif',
-    li: ['ReactJS & Ant Design']
+    li: ['React.js | Ant Design']
   },  
   {
     link: 'https://vocabulary-online-testing.vercel.app',
     title: 'Testing Quiz',
     img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
-    li: ['Online vocabulary testing app.']
+    li: ['jQuery']
   }
 ];
 
