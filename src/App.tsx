@@ -22,6 +22,7 @@ function App() {
 
   const [headerPadding, setHeaderPadding] = useState(40);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isShow, setIsShow] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
   const isMobileDevice = useMediaQuery({
@@ -45,7 +46,8 @@ function App() {
     top: 0,
     width: "100%",
     zIndex: 999,
-    transition: "0.7s",
+    transition: "1.0s",
+    display: isShow? 'initial' : 'none'
   };
 
   const handleNavigation = (e: any) => {
@@ -77,6 +79,7 @@ function App() {
   window.onscroll = function () {
     myFunction();
   };
+
   function myFunction() {
     var winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -88,8 +91,10 @@ function App() {
     myElement.style.width = scrolled + "%";
     if (scrolled > 1) {
       setHeaderPadding(20);
+      setIsShow(true);
     } else {
       setHeaderPadding(40);
+      setIsShow(false);
     }
   }
 
@@ -120,22 +125,21 @@ function App() {
               flexDirection="row"
               justifyContent="space-between"
               alignItems="center"
-              className="animate__animated animate__zoomInRight"
+              
             >
               <h1
                 id="logo"
-                // className='myTextShadow'
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
+                className="animate__animated animate__fadeIn"
               >
                 Portfolio
               </h1>
-              <Box className="nav-wrapper">
+              <Box className="nav-wrapper animate__animated animate__fadeIn">
                 <Typography
                   variant="h1"
                   onClick={handleNavigation}
-                  className="nav-item"
                 >
                   Project
                 </Typography>
@@ -146,13 +150,6 @@ function App() {
                 >
                   Research
                 </Typography>
-                {/* <Typography 
-                    variant='h1'
-                    onClick={handleNavigation}
-                    className='nav-item myTextShadow'
-                  >
-                    Game
-                  </Typography> */}
                 <Typography
                   variant="h1"
                   onClick={handleNavigation}
@@ -199,13 +196,6 @@ function App() {
 
         {/* homepage  */}
         <div id="homepage">
-          <img
-            src="https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif"
-            width="240px"
-            className="animate__animated animate__zoomInDown"
-            style={{ marginBottom: 100 }}
-            alt="coding cat"
-          />
           <Typing
             strings={[
               "Hi, I'm Chao Zhang",
@@ -291,7 +281,7 @@ function App() {
               className="githubBtnWapper"
               style={{ width: "100%", textAlign: "center" }}
             >
-              <a href="https://github.com/chaozhang666">
+              <a href="https://github.com/chaozhangdev">
                 <div className="githubBtn myBoxShadow">
                   <GitHubIcon className="githubIcon" fontSize="large" />
                   <h3
