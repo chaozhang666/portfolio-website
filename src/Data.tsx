@@ -45,6 +45,12 @@ const researchData = [
 
 const projectData = [
   {
+    link: 'https://account-area-testing.azurewebsites.net/',
+    title: 'Wireless Account Area',
+    img: 'https://media.giphy.com/media/3SnXQ6S6TDN3iu2BRM/giphy.gif',
+    li: ['Vue.js | Element UI | Vue Bootstrap']
+  }, 
+  {
     link: 'https://codingfun.dev',
     title: 'Coding Tutorial Doc',
     img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
@@ -67,13 +73,7 @@ const projectData = [
     title: 'Responsive Website',
     img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
     li: ['A static content site']
-  },
-  {
-    link: 'https://web-dev-tutorial-eo8ezjk5c.vercel.app',
-    title: 'Web Dev Tutorial',
-    img: 'https://media.giphy.com/media/KwzTxTAFuiXKQ7ebri/giphy.gif',
-    li: ['React.js | Ant Design']
-  },  
+  }, 
   {
     link: 'https://vocabulary-online-testing.vercel.app',
     title: 'Testing Quiz',

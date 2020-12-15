@@ -199,8 +199,8 @@ function App() {
           <Typing
             strings={[
               "Hi, I'm Chao Zhang",
-              "A Software Developer 💡",
-              "Focus on Frontend Development and UI Design",
+              "A Software Engineer 💡",
+              "Focus on Front End Development and UI/UX Design",
               "Find my work below 👇🏻",
             ]}
           />
