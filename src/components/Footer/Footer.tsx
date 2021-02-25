@@ -10,6 +10,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 export default function Footer() {
 
+  const year = new Date().getFullYear();
+
   const isTabletOrMobileDevice = useMediaQuery({
     query: '(max-device-width: 1224px)'
   })
@@ -48,7 +50,7 @@ export default function Footer() {
           </Grid>
           
         </Container>
-        <p className='myTextShadow' style={{marginTop: '30px', fontSize: 16}}>© 2020 Chao Zhang</p>
+        <p className='myTextShadow' style={{marginTop: '30px', fontSize: 16}}>© {year} Chao Zhang</p>
       </Box>
     </div>
   )

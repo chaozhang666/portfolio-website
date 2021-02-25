@@ -45,8 +45,8 @@ const researchData = [
 
 const projectData = [
   {
-    link: 'https://account-area-testing.azurewebsites.net/',
-    title: 'Wireless Account Area',
+    link: 'https://myaccount.gophonebox.com/login',
+    title: 'Wireless My Account',
     img: 'https://media.giphy.com/media/3SnXQ6S6TDN3iu2BRM/giphy.gif',
     li: ['Vue.js | Element UI | Vue Bootstrap']
   }, 

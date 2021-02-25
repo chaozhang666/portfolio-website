@@ -200,7 +200,7 @@ function App() {
             strings={[
               "Hi, I'm Chao Zhang",
               "A Software Engineer 💡",
-              "Focus on Front End Development and UI/UX Design",
+              "Focus on front end development",
               "Find my work below 👇🏻",
             ]}
           />
@@ -246,8 +246,8 @@ function App() {
                 style={{ padding: "20px", textAlign: "justify" }}
               >
                 <Typography variant="h5" className="myTextShadow">
-                  I am a professional Software Developer with M.Sc in Computer
-                  Science. Currently, I am working as a Front End Developer. In
+                  I am a professional Software Engineer with M.Sc in Computer
+                  Science. Currently, I am focusing on front end development. In
                   my spare time, I love making some fun projects, teaching
                   students coding and playing guitar.
                 </Typography>
@@ -283,7 +283,7 @@ function App() {
                     className="myTextShadow"
                     style={{ display: "inline-block" }}
                   >
-                    Link to my Github Account
+                    Link to My Github 
                   </h3>
                 </div>
               </a>
