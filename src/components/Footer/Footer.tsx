@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <div>
-      <Box className='footer-container myBoxShadow'>
+      <Box className='footer-container'>
         <Container>
           <Grid    
             container

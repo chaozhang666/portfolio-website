@@ -46,16 +46,10 @@ const researchData = [
 const projectData = [
   {
     link: 'https://myaccount.gophonebox.com/login',
-    title: 'Wireless My Account',
+    title: 'Account Self Services',
     img: 'https://media.giphy.com/media/3SnXQ6S6TDN3iu2BRM/giphy.gif',
     li: ['Vue.js | Element UI | Vue Bootstrap']
   }, 
-  {
-    link: 'https://codingfun.dev',
-    title: 'Coding Tutorial Doc',
-    img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
-    li: ['VuePress | MarkDown | Vue.js']
-  },  
   {
     link: 'https://gophonebox.com',
     title: 'E-Commerce Site',
@@ -68,6 +62,12 @@ const projectData = [
     img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
     li: ['Conditionally rendered contents']
   },
+  {
+    link: 'https://codingfun.dev',
+    title: 'Coding Tutorial Doc',
+    img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
+    li: ['VuePress | MarkDown | Vue.js']
+  },  
   {
     link: 'https://earnest.education',
     title: 'Responsive Website',

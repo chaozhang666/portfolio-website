@@ -1,16 +1,3 @@
-.card {
-  padding: 30px;
-  border-radius: 20px;
-}
-
-.card:hover {
-  box-shadow: 
-    inset 7px 7px 15px rgba(55, 84, 170,.15),
-    inset -7px -7px 20px rgba(255, 255, 255,1),
-    0px 0px 4px rgba(255, 255, 255,.2);
-    transition: box-shadow 399ms ease-in-out;
-}
-
 .cardTitle {
   margin-bottom: 30px;
   text-align: center;
@@ -25,3 +12,23 @@
   width: 100%;
   height: auto;
 }
+
+.card {
+  padding: 30px;
+  color: #000000;
+  box-shadow: -10px 25px 50px #fff;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+.card h2,
+.card ul li {
+  color: #131313;
+}
+
+.card:hover {
+  box-shadow: -10px 25px 50px #131313;
+  transition: 0.7s;
+}
+
+

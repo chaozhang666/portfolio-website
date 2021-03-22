@@ -26,7 +26,8 @@ class Typing extends React.Component {
   render() {
 
     const textStyle = {
-      fontSize: '30px',
+      fontSize: '24px',
+      color: '#fff',
       padding: 20
     }
 

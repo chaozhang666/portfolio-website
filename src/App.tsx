@@ -13,7 +13,7 @@ import Section from "./components/Section/Section";
 import Footer from "./components/Footer/Footer";
 import { useMediaQuery } from "react-responsive";
 import Typing from "./components/Typing/Typing";
-import { researchData, projectData, gameData } from "./Data";
+import { researchData, projectData } from "./Data";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import smoothscroll from "smoothscroll-polyfill";
 
@@ -22,7 +22,7 @@ function App() {
 
   const [headerPadding, setHeaderPadding] = useState(40);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isShow, setIsShow] = useState(false);
+  // const [isShow, setIsShow] = useState(false);
   const [buttonClasses, setButtonClasses] = useState("menu-btn");
 
   const isMobileDevice = useMediaQuery({
@@ -36,8 +36,8 @@ function App() {
   });
 
   const webHeaderStyle: any = {
-    backgroundColor: "#f1f3f6",
-    color: "black",
+    backgroundColor: "#131313",
+    color: "#ffffff",
     paddingTop: headerPadding,
     paddingBottom: headerPadding,
     paddingLeft: 20,
@@ -47,7 +47,6 @@ function App() {
     width: "100%",
     zIndex: 999,
     transition: "1.0s",
-    display: isShow? 'initial' : 'none'
   };
 
   const handleNavigation = (e: any) => {
@@ -91,10 +90,10 @@ function App() {
     myElement.style.width = scrolled + "%";
     if (scrolled > 1) {
       setHeaderPadding(20);
-      setIsShow(true);
+      // setIsShow(true);
     } else {
       setHeaderPadding(40);
-      setIsShow(false);
+      // setIsShow(false);
     }
   }
 
@@ -115,17 +114,13 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <div
-          style={webHeaderStyle}
-          className={headerPadding === 20 ? "myBoxShadow" : ""}
-        >
+        <div style={webHeaderStyle}>
           <Container>
             <Box
               display="flex"
               flexDirection="row"
               justifyContent="space-between"
               alignItems="center"
-              
             >
               <h1
                 id="logo"
@@ -137,10 +132,7 @@ function App() {
                 Portfolio
               </h1>
               <Box className="nav-wrapper animate__animated animate__fadeIn">
-                <Typography
-                  variant="h1"
-                  onClick={handleNavigation}
-                >
+                <Typography variant="h1" onClick={handleNavigation}>
                   Project
                 </Typography>
                 <Typography
@@ -196,12 +188,15 @@ function App() {
 
         {/* homepage  */}
         <div id="homepage">
+          <a href="https://codingfun.dev/">
+            <div className="codingfun animate__animated animate__zoomInDown"></div>
+          </a>
+
           <Typing
             strings={[
               "Hi, I'm Chao Zhang",
-              "A Software Engineer 💡",
-              "Focus on front end development",
-              "Find my work below 👇🏻",
+              "A creative Software Developer 💡",
+              "Click 😺 above to my education start up 👆🏻 <br/> or <br/> Find some of my work below 👇🏻",
             ]}
           />
         </div>
@@ -246,9 +241,9 @@ function App() {
                 style={{ padding: "20px", textAlign: "justify" }}
               >
                 <Typography variant="h5" className="myTextShadow">
-                  I am a professional Software Engineer with M.Sc in Computer
-                  Science. Currently, I am focusing on front end development. In
-                  my spare time, I love making some fun projects, teaching
+                  I am a professional Software Developer. Currently, I am
+                  working on Vue.js web projects & React Native mobile projects.
+                  In my spare time, I love making some fun projects, teaching
                   students coding and playing guitar.
                 </Typography>
               </Grid>
@@ -261,13 +256,12 @@ function App() {
               >
                 <Typography variant="h5" className="myTextShadow">
                   I established{" "}
-                  <a href="https://codingfun.dev/" style={{ color: "#ad610a" }}>
+                  <a href="https://codingfun.dev/" style={{ color: "#ffb310" }}>
                     Coding Fun Education
                   </a>{" "}
                   in 2019 Sep to provide students with online coding education.
                   It lets students quickly learn the fundamental of different
                   programming languages in a fun way.
-                  {/* So far, more than 200 students have enrolled in my courses. */}
                 </Typography>
               </Grid>
             </Grid>
@@ -277,14 +271,9 @@ function App() {
               style={{ width: "100%", textAlign: "center" }}
             >
               <a href="https://github.com/chaozhangdev">
-                <div className="githubBtn myBoxShadow">
+                <div className="githubBtn">
                   <GitHubIcon className="githubIcon" fontSize="large" />
-                  <h3
-                    className="myTextShadow"
-                    style={{ display: "inline-block" }}
-                  >
-                    Link to My Github 
-                  </h3>
+                  <h3 style={{ display: "inline-block" }}>Link to My Github</h3>
                 </div>
               </a>
             </div>

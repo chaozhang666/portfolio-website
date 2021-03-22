@@ -16,14 +16,33 @@ img {
 }
 
 #homepage {
+  background-color: #131313;
   text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f1f3f6;
 }
+
+#homepage img {
+  width: 220px !important;
+  height: 220px !important;
+  margin: 40px 0px;
+}
+
+.codingfun {
+  background-image: url(https://media.giphy.com/media/f6hnhHkks8bk4jwjh3/giphy.gif);
+  /* background-image: url(https://media.giphy.com/media/QsI9b41Pf2OFLJ8UC8/giphy.gif); */
+  background-size: 100%;
+  width: 220px !important;
+  height: 220px !important;
+  margin: 40px 0px;
+}
+/* .codingfun:hover {
+  transition: 0.4s;
+  background-image: url(https://media.giphy.com/media/QsI9b41Pf2OFLJ8UC8/giphy.gif);
+} */
 
 .navigation {
   padding: 0px;
@@ -41,20 +60,20 @@ img {
   margin: 0 8px;
 }
 
-.nav-wrapper h1, .logo {
-  padding: 12px 16px; 
+.nav-wrapper h1,
+.logo {
+  padding: 12px 16px;
   font-size: 22px;
   border-radius: 20px;
   transition: 0.5s;
   font-weight: 700;
 }
 
-.nav-wrapper h1:hover{
+.nav-wrapper h1:hover {
   cursor: pointer;
-  box-shadow: 
-  inset 7px 7px 15px rgba(55, 84, 170,.15),
-  inset -7px -7px 20px rgba(255, 255, 255,1),
-  0px 0px 4px rgba(255, 255, 255,.2);
+  box-shadow: inset 7px 7px 15px #fff,
+    inset -7px -7px 20px rgba(255, 255, 255, 1),
+    0px 0px 4px #fff;
   transition: box-shadow 399ms ease-in-out;
 }
 
@@ -68,9 +87,23 @@ hr {
   border-width: 5px;
 }
 
-#research, #project, #game, #about{
-  background-color: #f1f3f6;
+#project {
+  background-image: linear-gradient(to bottom, #131313, #3b477c);
 }
+
+#research {
+  background-image: linear-gradient(to bottom, #3b477c, #6c77a8);
+}
+
+#about {
+  background-image: linear-gradient(to bottom, #6c77a8, #5383aa);
+}
+
+/* #research,
+#project,
+#about {
+  background-color: #131313;
+} */
 
 .githubBtnWapper {
   display: flex;
@@ -86,18 +119,11 @@ hr {
   align-items: center;
   padding: 10px 30px;
   margin-bottom: 80px;
-  color: #131313;
   border-radius: 20px;
   font-size: 18px;
   border-radius: 20px;
-}
-
-.githubBtn:hover {
-  box-shadow: 
-    inset 7px 7px 15px rgba(55, 84, 170,.15),
-    inset -7px -7px 20px rgba(255, 255, 255,1),
-    0px 0px 4px rgba(255, 255, 255,.2);
-  transition: box-shadow 399ms ease-in-out;
+  background-color: #fff;
+  color: #131313;
 }
 
 .githubIcon {
@@ -116,25 +142,22 @@ hr {
   position: absolute;
   top: 18px;
   height: 4px;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
   width: 0%;
 }
-
-.myBoxShadow {
-  box-shadow:  
-    inset 0 0 15px rgba(55, 84, 170,0),
-    inset 0 0 20px rgba(255, 255, 255,0),
-    7px 7px 15px rgba(55, 84, 170,.15),
-    -7px -7px 20px rgba(255, 255, 255,1),
-    inset 0px 0px 4px rgba(255, 255, 255,.2);
+.mycard {
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2);
   background: #f1f3f6;
 }
 
 .myTextShadow {
   color: transparent;
-  background: #131313;
+  background: #fff;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
