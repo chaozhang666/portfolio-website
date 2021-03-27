@@ -242,9 +242,9 @@ function App() {
               >
                 <Typography variant="h5" className="myTextShadow">
                   I am a professional Software Developer. Currently, I am
-                  working on Vue.js web projects & React Native mobile projects.
-                  In my spare time, I love making some fun projects, teaching
-                  students coding and playing guitar.
+                  working on Vue.js, React.js and React Native projects. In my
+                  spare time, I love making some fun projects, teaching students
+                  coding and playing guitar.
                 </Typography>
               </Grid>
 
