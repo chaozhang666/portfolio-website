@@ -4,6 +4,45 @@ import IMGip from './img/ip.png';
 import IMGad from './img/audio.png';
 import IMGrfid from './img/rfid.png';
 
+const projectData = [
+  {
+    link: 'https://computer-graphics-playground.vercel.app/',
+    title: 'Computer Graphics',
+    img: 'https://media.giphy.com/media/7mflYXExK0QsYjVMhO/giphy.gif',
+    li: ['Material UI | React Three Fiber']
+  }, 
+  {
+    link: 'https://myaccount.gophonebox.com/login',
+    title: 'Account Self Services',
+    img: 'https://media.giphy.com/media/3SnXQ6S6TDN3iu2BRM/giphy.gif',
+    li: ['Vue.js | Element UI | Vue Bootstrap']
+  }, 
+  {
+    link: 'https://gophonebox.com',
+    title: 'E-Commerce Site',
+    img: 'https://media.giphy.com/media/LfzFc32cq1L75RSxsM/giphy.gif',
+    li: ['Mobile first bilingual website']
+  },  
+  {
+    link: 'https://chi-noodlebar.com',
+    title: 'Mobile First Website',
+    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
+    li: ['Conditionally rendered contents']
+  },
+  {
+    link: 'https://codingfun.dev',
+    title: 'Coding Tutorial Doc',
+    img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
+    li: ['VuePress | MarkDown | Vue.js']
+  },  
+  {
+    link: 'https://earnest.education',
+    title: 'Responsive Website',
+    img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
+    li: ['Bootstrap 4']
+  }, 
+];
+
 const researchData = [
   {
     link: 'https://github.com/zzzchaozzz/Steganography',
@@ -43,44 +82,6 @@ const researchData = [
   }
 ];
 
-const projectData = [
-  {
-    link: 'https://myaccount.gophonebox.com/login',
-    title: 'Account Self Services',
-    img: 'https://media.giphy.com/media/3SnXQ6S6TDN3iu2BRM/giphy.gif',
-    li: ['Vue.js | Element UI | Vue Bootstrap']
-  }, 
-  {
-    link: 'https://gophonebox.com',
-    title: 'E-Commerce Site',
-    img: 'https://media.giphy.com/media/LfzFc32cq1L75RSxsM/giphy.gif',
-    li: ['Mobile first bilingual website']
-  },  
-  {
-    link: 'https://chi-noodlebar.com',
-    title: 'Mobile First Website',
-    img: 'https://media.giphy.com/media/QYjvkJMSSkvPIq66mK/giphy.gif',
-    li: ['Conditionally rendered contents']
-  },
-  {
-    link: 'https://codingfun.dev',
-    title: 'Coding Tutorial Doc',
-    img: 'https://media.giphy.com/media/s43DnwGKcQAj34sLxc/giphy.gif',
-    li: ['VuePress | MarkDown | Vue.js']
-  },  
-  {
-    link: 'https://earnest.education',
-    title: 'Responsive Website',
-    img: 'https://media.giphy.com/media/Tfvno6sueQThNHoqMP/giphy.gif',
-    li: ['A static content site']
-  }, 
-  {
-    link: 'https://vocabulary-online-testing.vercel.app',
-    title: 'Testing Quiz',
-    img: 'https://media.giphy.com/media/dAFAYeeCbKARKyTcut/giphy.gif',
-    li: ['jQuery']
-  }
-];
 
 const gameData = [
   {
