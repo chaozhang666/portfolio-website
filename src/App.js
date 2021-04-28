@@ -35,7 +35,7 @@ function App() {
     },
   });
 
-  const webHeaderStyle: any = {
+  const webHeaderStyle = {
     backgroundColor: "#131313",
     color: "#ffffff",
     paddingTop: headerPadding,
@@ -49,7 +49,7 @@ function App() {
     transition: "1.0s",
   };
 
-  const handleNavigation = (e: any) => {
+  const handleNavigation = (e) => {
     switch (e.target.innerText) {
       case "Research":
         move(research);
@@ -68,7 +68,7 @@ function App() {
     }
   };
 
-  const move = (e: any) => {
+  const move = (e) => {
     let position = e.current.offsetTop;
     position -= isMobileDevice ? 50 : 0;
     window.scroll({ top: position, behavior: "smooth" });
@@ -86,7 +86,7 @@ function App() {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
-    const myElement = document.getElementById("myBar")!;
+    const myElement = document.getElementById("myBar");
     myElement.style.width = scrolled + "%";
     if (scrolled > 1) {
       setHeaderPadding(20);
@@ -97,10 +97,10 @@ function App() {
     }
   }
 
-  const research = useRef<HTMLInputElement>(null);
-  const project = useRef<HTMLInputElement>(null);
-  const game = useRef<HTMLInputElement>(null);
-  const about = useRef<HTMLInputElement>(null);
+  const research = useRef(null);
+  const project = useRef(null);
+  const game = useRef(null);
+  const about = useRef(null);
 
   const handleButtonClick = () => {
     if (isMenuOpen) {
