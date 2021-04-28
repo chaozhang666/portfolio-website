@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 
-export default function Card(props : any) {
+export default function Card(props) {
   return (
     <div>
       <a href={props.link}>
@@ -9,7 +9,7 @@ export default function Card(props : any) {
           <h2 className='cardTitle myTextShadow'>{props.name}</h2>
           <img src={props.src} className='cardImage' alt='project images' />
           <ul className='listWrapper'>
-            {props.li.map((e : any) => 
+            {props.li.map((e) => 
               <li className='li myTextShadow'>{e}</li>
             )}   
           </ul>
