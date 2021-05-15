@@ -8,8 +8,6 @@
 
 ![alt text](https://media.giphy.com/media/2M7g4y56rBqn82pUOA/giphy.gif)
 
-### Demo Address: https://chao.gg/
-
 ### How to start:
 
 ```
